@@ -94,7 +94,7 @@ namespace ItemsManager
                             sqlprmarrRestFileList[1] = new SqlParameter("@Password", txtBackupPassword.Text);
                         }
                         sqlprmarrRestFileList[0] = new SqlParameter("@path", ofdDatabaseBackkupFile.FileName);
-                        DBConnection.Connect(txtServerName.Text, "master", txtUserName.Text, txtPassword.Text);
+                        DBConnection.Connect(txtServerName.Text, "master", txtUserName.Text, txtPassword.Text, chkbxIntegratedSecurity.Checked);
                         DataTable dtUsers = new DataTable();
                         dtUsers = SqlAdoWrapper.ExecuteQueryCommand(strCommandText, sqlprmarrRestFileList,
                             true);
@@ -158,7 +158,7 @@ namespace ItemsManager
             {
                 DBConnection.Disconnect();
                 if (DBConnection.Connect(txtServerName.Text, cbxDatabases.Text, txtUserName.Text,
-                    txtPassword.Text))
+                    txtPassword.Text, chkbxIntegratedSecurity.Checked))
                 {
                     Helper.ShowMessage(Resources.ProgramMessages.MesConnectSuccessfull);
                     Application.Restart();
@@ -179,6 +179,7 @@ namespace ItemsManager
                 strUsername = ConfigurationManager.Username;
                 strServername = ConfigurationManager.ServerName;
                 strPassword = ConfigurationManager.Password;
+                bIntegratedSecurity = ConfigurationManager.IntegratedSecurity;
                 rbRestoreDB.Enabled = !bConnectOnly;
             }
             catch (Exception ex)
@@ -215,7 +216,7 @@ namespace ItemsManager
             {
                 Cursor.Current = Cursors.WaitCursor;
                 cbxDatabases.Tag = null;
-                if (ValidateForm() && DBConnection.Connect(txtServerName.Text, "master", txtUserName.Text, txtPassword.Text))
+                if (ValidateForm() && DBConnection.Connect(txtServerName.Text, "master", txtUserName.Text, txtPassword.Text, chkbxIntegratedSecurity.Checked))
                 {
                     cbxDatabases.DataSource = SqlAdoWrapper.SelectServerDatabases(false);
                     cbxDatabases.DisplayMember = cbxDatabases.ValueMember = "DataBaseName";
@@ -311,6 +312,7 @@ namespace ItemsManager
                 ConfigurationManager.Password = strPassword;
                 ConfigurationManager.ServerName = strServername;
                 ConfigurationManager.Username = strUsername;
+                ConfigurationManager.IntegratedSecurity = bIntegratedSecurity;
             }
             catch (Exception ex)
             {
