@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B8D8FA10-BDDE-4ADB-A071-F7988FFB91EF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Managers</RootNamespace>
+    <AssemblyName>Managers</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseManager.cs" />
+    <Compile Include="BasicData\mngrSuppliers.cs" />
+    <Compile Include="BasicData\mngrSuppliersTypes.cs" />
+    <Compile Include="Expenses\mngrExpenses.cs" />
+    <Compile Include="Expenses\mngrExpenses.ex.cs" />
+    <Compile Include="Expenses\mngrExpensesTypes.cs" />
+    <Compile Include="Invoice\mngrInvoiceDetails.cs" />
+    <Compile Include="Invoice\mngrInvoiceDetails.ex.cs" />
+    <Compile Include="Invoice\mngrInvoiceHead.cs" />
+    <Compile Include="Invoice\mngrInvoiceHead.ex.cs" />
+    <Compile Include="Items\mngrItemsInHead.ex.cs" />
+    <Compile Include="Items\mngrItems.cs" />
+    <Compile Include="Items\mngrItems.ex.cs" />
+    <Compile Include="Items\mngrItemsCategories.cs" />
+    <Compile Include="Items\mngrItemsCategories.ex.cs" />
+    <Compile Include="Items\mngrItemsInDetails.cs" />
+    <Compile Include="Items\mngrItemsInDetails.ex.cs" />
+    <Compile Include="Items\mngrItemsInDetails_InvoiceDetails.cs" />
+    <Compile Include="Items\mngrItemsInDetails_InvoiceDetails.ex.cs" />
+    <Compile Include="Items\mngrItemsInHead.cs" />
+    <Compile Include="Items\mngrItemsUnits.cs" />
+    <Compile Include="Items\mngrItemsUnits.ex.cs" />
+    <Compile Include="Items\mngrItemsUnitsConversions.cs" />
+    <Compile Include="Items\mngrItemsUnitsConversions.ex.cs" />
+    <Compile Include="mngrColumnNames.cs" />
+    <Compile Include="mngrShifts.ex.cs" />
+    <Compile Include="mngrTableNames.cs" />
+    <Compile Include="mngrShifts.cs" />
+    <Compile Include="Invoice\Stocktaking\mngrItemsInDetails_StocktakingDetails.ex.cs" />
+    <Compile Include="Invoice\Stocktaking\mngrItemsInDetails_StocktakingDetails.cs" />
+    <Compile Include="Invoice\Stocktaking\mngrStocktakingDetails.ex.cs" />
+    <Compile Include="Invoice\Stocktaking\mngrStocktakingDetails.cs" />
+    <Compile Include="Invoice\Stocktaking\mngrStocktakingHead.cs" />
+    <Compile Include="Invoice\Stocktaking\mngrStocktakingHead.ex.cs" />
+    <Compile Include="Units\mngrUnits.cs" />
+    <Compile Include="Units\mngrUnits.ex.cs" />
+    <Compile Include="Units\mngrUnitsConversions.cs" />
+    <Compile Include="Units\mngrUnitsConversions.ex.cs" />
+    <Compile Include="Units\mngrUnitsTypes.cs" />
+    <Compile Include="mngrUsers.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Units\mngrUnitsTypes.ex.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{0D9F73C0-8371-4B6B-9939-8F199E271465}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilities\Utilities.csproj">
+      <Project>{C17A5E0A-7EAD-418C-8EDA-1B91B88F5F09}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
