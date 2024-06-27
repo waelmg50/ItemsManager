@@ -28,28 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.crvReport = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            
             ((System.ComponentModel.ISupportInitialize)(this.errprvForm)).BeginInit();
             this.SuspendLayout();
-            // 
-            // crvReport
-            // 
-            this.crvReport.ActiveViewIndex = -1;
-            this.crvReport.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crvReport.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crvReport.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crvReport.Location = new System.Drawing.Point(0, 0);
-            this.crvReport.Name = "crvReport";
-            this.crvReport.Size = new System.Drawing.Size(601, 415);
-            this.crvReport.TabIndex = 0;
-            this.crvReport.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
+            
             // 
             // frmPrintInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(601, 415);
-            this.Controls.Add(this.crvReport);
+            
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmPrintInfo";
@@ -63,6 +52,6 @@
 
         #endregion
 
-        public CrystalDecisions.Windows.Forms.CrystalReportViewer crvReport;
+        
     }
 }

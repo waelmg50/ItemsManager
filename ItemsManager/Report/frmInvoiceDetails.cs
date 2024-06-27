@@ -10,8 +10,6 @@ using Utilities;
 using Entities;
 using Managers;
 using System.Data.SqlClient;
-using CrystalDecisions.CrystalReports.Engine;
-using CrystalDecisions.CrystalReports.Engine.Migration;
 using ItemsManager.Report;
 
 namespace ItemsManager.Report
@@ -73,13 +71,13 @@ namespace ItemsManager.Report
             {
                 if (Helper.CheckNumberInt(txtInvoiceHeadID.Text))
                 {
-                    ReportDocument InvoiceDetails1byInvoiceHeadID = new ReportDocument();
-                    InvoiceDetails1byInvoiceHeadID.Load(@"Report\ReportsFiles\rptInvoiceDetails1byInvoiceHeadID.rpt");
-                    InvoiceDetails1byInvoiceHeadID.SetDataSource(mngrInvoiceDetails.GetView_InvoiceDetails1byInvoiceHeadID(
-                        Convert.ToInt32(txtInvoiceHeadID.Text)));
-                    frmPrintInfo info = new frmPrintInfo();
-                    info.crvReport.ReportSource = InvoiceDetails1byInvoiceHeadID;
-                    info.Show();
+                    //ReportDocument InvoiceDetails1byInvoiceHeadID = new ReportDocument();
+                    //InvoiceDetails1byInvoiceHeadID.Load(@"Report\ReportsFiles\rptInvoiceDetails1byInvoiceHeadID.rpt");
+                    //InvoiceDetails1byInvoiceHeadID.SetDataSource(mngrInvoiceDetails.GetView_InvoiceDetails1byInvoiceHeadID(
+                    //    Convert.ToInt32(txtInvoiceHeadID.Text)));
+                    //frmPrintInfo info = new frmPrintInfo();
+                    //info.crvReport.ReportSource = InvoiceDetails1byInvoiceHeadID;
+                    //info.Show();
                 }
             }
             catch (Exception ex)
@@ -91,18 +89,18 @@ namespace ItemsManager.Report
         {
             try
             {
-                ReportDocument InvoiceDetails = new ReportDocument();
-                InvoiceDetails.Load(@"Report\ReportsFiles\rptInvoiceDetails.rpt");
-                if (dgvData.DataSource is DataTable && dgvData.RowCount > 0)
-                    InvoiceDetails.SetDataSource((DataTable)dgvData.DataSource);
-                else
-                {
-                    Helper.ShowMessage(Resources.ProgramMessages.MesNoDataToDisplay);
-                    return;
-                }
-                frmPrintInfo info = new frmPrintInfo();
-                info.crvReport.ReportSource = InvoiceDetails;
-                info.Show();
+                //ReportDocument InvoiceDetails = new ReportDocument();
+                //InvoiceDetails.Load(@"Report\ReportsFiles\rptInvoiceDetails.rpt");
+                //if (dgvData.DataSource is DataTable && dgvData.RowCount > 0)
+                //    InvoiceDetails.SetDataSource((DataTable)dgvData.DataSource);
+                //else
+                //{
+                //    Helper.ShowMessage(Resources.ProgramMessages.MesNoDataToDisplay);
+                //    return;
+                //}
+                //frmPrintInfo info = new frmPrintInfo();
+                //info.crvReport.ReportSource = InvoiceDetails;
+                //info.Show();
             }
             catch (Exception ex)
             {

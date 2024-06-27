@@ -75,10 +75,6 @@
     <OutputPath>bin\x86\Release\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
-    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
-    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="System" />
     <Reference Include="System.Core">
@@ -265,22 +261,6 @@
       <DependentUpon>frmView_Expenses.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report\ReportsFiles\rptExpenses.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>rptExpenses1.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report\ReportsFiles\rptExpensesByType.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>rptExpensesByType1.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report\ReportsFiles\rptInvoiceDetails.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>rptInvoiceDetails1.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report\ReportsFiles\rptInvoiceDetails1byInvoiceHeadID.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>rptInvoiceDetails1byInvoiceHeadID1.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="Resources\ProgramMessages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ProgramMessages.Designer.cs</LastGenOutput>
@@ -385,30 +365,6 @@
     <Compile Include="Report\frmView_Expenses.Designer.cs">
       <DependentUpon>frmView_Expenses.cs</DependentUpon>
     </Compile>
-    <Compile Include="Report\ReportsFiles\rptExpenses1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>rptExpenses.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\ReportsFiles\rptExpensesByType1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>rptExpensesByType.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\ReportsFiles\rptInvoiceDetails1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>rptInvoiceDetails.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\ReportsFiles\rptInvoiceDetails1byInvoiceHeadID1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>rptInvoiceDetails1byInvoiceHeadID.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Resources\ProgramMessages.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -504,18 +460,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Report\InvoiceTotal.rpt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Report\InvoiceWithDetails.rpt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Report\ItemsInTotal.rpt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Report\ItemsInWithDetails.rpt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="Resources\search.png" />
   </ItemGroup>
   <ItemGroup>
@@ -541,6 +485,9 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Report\ReportsFiles\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

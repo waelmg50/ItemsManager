@@ -9,8 +9,6 @@ using Utilities;
 using Entities;
 using Managers;
 using System.Data.SqlClient;
-using CrystalDecisions.CrystalReports.Engine;
-using CrystalDecisions.CrystalReports.Engine.Migration;
 using ItemsManager.Report;
 
 namespace ItemsManager.Report
@@ -63,18 +61,18 @@ namespace ItemsManager.Report
         {
             try
             {
-                ReportDocument Expenses = new ReportDocument();
-                Expenses.Load(@"Report\ReportsFiles\rptExpenses.rpt");
-                if (dataGridView1.DataSource is DataTable && dataGridView1.RowCount > 0)
-                    Expenses.SetDataSource((DataTable)dataGridView1.DataSource);
-                else
-                {
-                    Helper.ShowMessage(Resources.ProgramMessages.MesNoDataToDisplay);
-                    return;
-                }
-                frmPrintInfo info = new frmPrintInfo();
-                info.crvReport.ReportSource = Expenses;
-                info.Show();
+                //ReportDocument Expenses = new ReportDocument();
+                //Expenses.Load(@"Report\ReportsFiles\rptExpenses.rpt");
+                //if (dataGridView1.DataSource is DataTable && dataGridView1.RowCount > 0)
+                //    Expenses.SetDataSource((DataTable)dataGridView1.DataSource);
+                //else
+                //{
+                //    Helper.ShowMessage(Resources.ProgramMessages.MesNoDataToDisplay);
+                //    return;
+                //}
+                //frmPrintInfo info = new frmPrintInfo();
+                //info.crvReport.ReportSource = Expenses;
+                //info.Show();
             }
             catch (Exception ex)
             {
@@ -85,18 +83,18 @@ namespace ItemsManager.Report
         {
             try
             {
-                ReportDocument Expenses = new ReportDocument();
-                Expenses.Load(@"Report\ReportsFiles\rptExpensesByType.rpt");
-                if (dataGridView1.DataSource is DataTable && dataGridView1.RowCount > 0)
-                    Expenses.SetDataSource((DataTable)dataGridView1.DataSource);
-                else
-                {
-                    Helper.ShowMessage(Resources.ProgramMessages.MesNoDataToDisplay);
-                    return;
-                }
-                frmPrintInfo info = new frmPrintInfo();
-                info.crvReport.ReportSource = Expenses;
-                info.Show();
+                //ReportDocument Expenses = new ReportDocument();
+                //Expenses.Load(@"Report\ReportsFiles\rptExpensesByType.rpt");
+                //if (dataGridView1.DataSource is DataTable && dataGridView1.RowCount > 0)
+                //    Expenses.SetDataSource((DataTable)dataGridView1.DataSource);
+                //else
+                //{
+                //    Helper.ShowMessage(Resources.ProgramMessages.MesNoDataToDisplay);
+                //    return;
+                //}
+                //frmPrintInfo info = new frmPrintInfo();
+                //info.crvReport.ReportSource = Expenses;
+                //info.Show();
             }
             catch (Exception ex)
             {

@@ -7,7 +7,6 @@ using System.Text;
 using System.Windows.Forms;
 using Utilities;
 using Managers;
-using CrystalDecisions.CrystalReports.Engine;
 
 namespace ItemsManager.Report
 {
@@ -130,13 +129,13 @@ namespace ItemsManager.Report
                     string strReportFileName = @"Report\InvoiceTotal.rpt";
                     if (rdbtnDetails.Checked)
                         strReportFileName = @"Report\InvoiceWithDetails.rpt";
-                    ReportDocument rptInvoices = new ReportDocument();
-                    rptInvoices.Load(strReportFileName);
-                    rptInvoices.SetDataSource(mngrInvoiceHead.GetInvoicesReport(dtpDateFrom.Value, dtpDateTo.Value, iInvoiceIDFrom, iInvoiceIDTo,
-                        iCustomerTypeID, iCustomerID, rdbtnDetails.Checked));
-                    frmPrintInfo frmPrint = new frmPrintInfo();
-                    frmPrint.crvReport.ReportSource = rptInvoices;
-                    frmPrint.ShowDialog(this);
+                    //ReportDocument rptInvoices = new ReportDocument();
+                    //rptInvoices.Load(strReportFileName);
+                    //rptInvoices.SetDataSource(mngrInvoiceHead.GetInvoicesReport(dtpDateFrom.Value, dtpDateTo.Value, iInvoiceIDFrom, iInvoiceIDTo,
+                    //    iCustomerTypeID, iCustomerID, rdbtnDetails.Checked));
+                    //frmPrintInfo frmPrint = new frmPrintInfo();
+                    //frmPrint.crvReport.ReportSource = rptInvoices;
+                    //frmPrint.ShowDialog(this);
                 }
             }
             catch (Exception ex)
