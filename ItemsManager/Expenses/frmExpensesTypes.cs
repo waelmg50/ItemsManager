@@ -80,7 +80,7 @@ namespace ItemsManager.Expenses
                 {
                     Crrnt = new entExpensesTypes(iRecordID);
                     tbxName.Text = Crrnt.Name;
-                    if (iRecordID < 4)
+                    if (iRecordID < 2)
                         pnlControls.Tag = 1;
                     else
                         pnlControls.Tag = null;
