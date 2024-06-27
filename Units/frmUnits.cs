@@ -81,7 +81,7 @@ namespace ItemsManager.Units
                     Crrnt = new entUnits(iRecordID);
                     txtName.Text = Crrnt.Name;
                     cmbTypeID.SelectedValue = Crrnt.TypeID;
-                    if (iRecordID < 8)
+                    if (iRecordID < 2)
                         pnlControls.Tag = 1;
                     else
                         pnlControls.Tag = null;

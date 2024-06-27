@@ -159,7 +159,7 @@ namespace ItemsManager.SystemForms
                     errprvForm.SetError(txtPassword, Resources.ProgramMessages.MesPassrdNotLess4Char);
                     Res = false;
                 }
-                if (txtPassword.Text.Length > 4 && txtPassword.Text.Length > 0 && txtPasswordConfirmation.Text != txtPassword.Text)
+                if (txtPassword.Text.Length >= 4 && txtPassword.Text.Length > 0 && txtPasswordConfirmation.Text != txtPassword.Text)
                 {
                     errprvForm.SetError(txtPassword, Resources.ProgramMessages.MesInvalidPassConf);
                     errprvForm.SetError(txtPasswordConfirmation, Resources.ProgramMessages.MesInvalidPassConf);

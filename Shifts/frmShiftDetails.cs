@@ -105,6 +105,11 @@ namespace ItemsManager.Shifts
                 Cursor.Current = Cursors.Default;
             }
         }
+        protected override void Print()
+        {
+            base.Print();
+
+        }
 
         #endregion
 

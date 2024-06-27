@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -38,6 +36,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblBeginDate = new System.Windows.Forms.Label();
             this.lblBeginDateValue = new System.Windows.Forms.Label();
             this.lblBeginTime = new System.Windows.Forms.Label();
@@ -72,10 +72,6 @@
             this.tabcntShiftDetails = new System.Windows.Forms.TabControl();
             this.tpItemsIn = new System.Windows.Forms.TabPage();
             this.dgvItemsIn = new System.Windows.Forms.DataGridView();
-            this.dgtbxItemsInID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgtbxItemsInDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgtbxcItemsInTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgtbxcItemsInUserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tpInvoices = new System.Windows.Forms.TabPage();
             this.dgvInvoices = new System.Windows.Forms.DataGridView();
             this.dgtbxcInvoiceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -96,6 +92,11 @@
             this.dgvtbxcExpensesStatement = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvtbxcExpensesRemarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvtbxcExpensesValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgtbxItemsInID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgtbxItemsInDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgtbxcItemsInTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgtbxcItemsInUserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgybxcSupplierName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlControls.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errprvForm)).BeginInit();
             this.grpbxTotals.SuspendLayout();
@@ -113,8 +114,9 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(570, 5);
-            this.txtID.Size = new System.Drawing.Size(73, 20);
+            this.txtID.Location = new System.Drawing.Point(760, 6);
+            this.txtID.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtID.Size = new System.Drawing.Size(96, 22);
             // 
             // pnlControls
             // 
@@ -136,6 +138,8 @@
             this.pnlControls.Controls.Add(this.lblUserOut);
             this.pnlControls.Controls.Add(this.grpbxTotals);
             this.pnlControls.ForeColor = System.Drawing.Color.MediumBlue;
+            this.pnlControls.Location = new System.Drawing.Point(0, 31);
+            this.pnlControls.Size = new System.Drawing.Size(989, 604);
             this.pnlControls.Controls.SetChildIndex(this.grpbxTotals, 0);
             this.pnlControls.Controls.SetChildIndex(this.lblUserOut, 0);
             this.pnlControls.Controls.SetChildIndex(this.txtID, 0);
@@ -157,7 +161,8 @@
             // 
             // lblID
             // 
-            this.lblID.Location = new System.Drawing.Point(666, 5);
+            this.lblID.Location = new System.Drawing.Point(888, 6);
+            this.lblID.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             // 
             // lblBeginDate
             // 
@@ -165,9 +170,10 @@
             this.lblBeginDate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBeginDate.ForeColor = System.Drawing.Color.MediumBlue;
             this.lblBeginDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblBeginDate.Location = new System.Drawing.Point(650, 18);
+            this.lblBeginDate.Location = new System.Drawing.Point(867, 22);
+            this.lblBeginDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBeginDate.Name = "lblBeginDate";
-            this.lblBeginDate.Size = new System.Drawing.Size(82, 19);
+            this.lblBeginDate.Size = new System.Drawing.Size(100, 23);
             this.lblBeginDate.TabIndex = 6;
             this.lblBeginDate.Text = "تاريخ البداية :";
             // 
@@ -178,10 +184,11 @@
             this.lblBeginDateValue.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBeginDateValue.ForeColor = System.Drawing.Color.DeepPink;
             this.lblBeginDateValue.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblBeginDateValue.Location = new System.Drawing.Point(543, 18);
+            this.lblBeginDateValue.Location = new System.Drawing.Point(724, 22);
+            this.lblBeginDateValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBeginDateValue.Name = "lblBeginDateValue";
             this.lblBeginDateValue.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblBeginDateValue.Size = new System.Drawing.Size(105, 29);
+            this.lblBeginDateValue.Size = new System.Drawing.Size(139, 35);
             this.lblBeginDateValue.TabIndex = 7;
             this.lblBeginDateValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -191,9 +198,10 @@
             this.lblBeginTime.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBeginTime.ForeColor = System.Drawing.Color.MediumBlue;
             this.lblBeginTime.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblBeginTime.Location = new System.Drawing.Point(468, 18);
+            this.lblBeginTime.Location = new System.Drawing.Point(624, 22);
+            this.lblBeginTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBeginTime.Name = "lblBeginTime";
-            this.lblBeginTime.Size = new System.Drawing.Size(76, 19);
+            this.lblBeginTime.Size = new System.Drawing.Size(93, 23);
             this.lblBeginTime.TabIndex = 8;
             this.lblBeginTime.Text = "وقت البداية :";
             // 
@@ -203,9 +211,10 @@
             this.lblEndTime.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEndTime.ForeColor = System.Drawing.Color.MediumBlue;
             this.lblEndTime.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblEndTime.Location = new System.Drawing.Point(103, 18);
+            this.lblEndTime.Location = new System.Drawing.Point(137, 22);
+            this.lblEndTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEndTime.Name = "lblEndTime";
-            this.lblEndTime.Size = new System.Drawing.Size(78, 19);
+            this.lblEndTime.Size = new System.Drawing.Size(96, 23);
             this.lblEndTime.TabIndex = 9;
             this.lblEndTime.Text = "وقت النهاية :";
             // 
@@ -216,10 +225,11 @@
             this.lblBeginTimeValue.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBeginTimeValue.ForeColor = System.Drawing.Color.DeepPink;
             this.lblBeginTimeValue.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblBeginTimeValue.Location = new System.Drawing.Point(379, 18);
+            this.lblBeginTimeValue.Location = new System.Drawing.Point(505, 22);
+            this.lblBeginTimeValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBeginTimeValue.Name = "lblBeginTimeValue";
             this.lblBeginTimeValue.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblBeginTimeValue.Size = new System.Drawing.Size(89, 29);
+            this.lblBeginTimeValue.Size = new System.Drawing.Size(118, 35);
             this.lblBeginTimeValue.TabIndex = 10;
             this.lblBeginTimeValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -229,9 +239,10 @@
             this.lblEndDate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEndDate.ForeColor = System.Drawing.Color.MediumBlue;
             this.lblEndDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblEndDate.Location = new System.Drawing.Point(293, 18);
+            this.lblEndDate.Location = new System.Drawing.Point(391, 22);
+            this.lblEndDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEndDate.Name = "lblEndDate";
-            this.lblEndDate.Size = new System.Drawing.Size(84, 19);
+            this.lblEndDate.Size = new System.Drawing.Size(103, 23);
             this.lblEndDate.TabIndex = 11;
             this.lblEndDate.Text = "تاريخ النهاية :";
             // 
@@ -242,10 +253,11 @@
             this.lblEndTimeValue.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEndTimeValue.ForeColor = System.Drawing.Color.DeepPink;
             this.lblEndTimeValue.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblEndTimeValue.Location = new System.Drawing.Point(7, 18);
+            this.lblEndTimeValue.Location = new System.Drawing.Point(9, 22);
+            this.lblEndTimeValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEndTimeValue.Name = "lblEndTimeValue";
             this.lblEndTimeValue.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblEndTimeValue.Size = new System.Drawing.Size(89, 29);
+            this.lblEndTimeValue.Size = new System.Drawing.Size(118, 35);
             this.lblEndTimeValue.TabIndex = 12;
             this.lblEndTimeValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -256,10 +268,11 @@
             this.lblEndDateValue.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEndDateValue.ForeColor = System.Drawing.Color.DeepPink;
             this.lblEndDateValue.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblEndDateValue.Location = new System.Drawing.Point(188, 18);
+            this.lblEndDateValue.Location = new System.Drawing.Point(251, 22);
+            this.lblEndDateValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEndDateValue.Name = "lblEndDateValue";
             this.lblEndDateValue.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblEndDateValue.Size = new System.Drawing.Size(105, 29);
+            this.lblEndDateValue.Size = new System.Drawing.Size(139, 35);
             this.lblEndDateValue.TabIndex = 13;
             this.lblEndDateValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -269,9 +282,10 @@
             this.lblShiftPeriod.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblShiftPeriod.ForeColor = System.Drawing.Color.MediumBlue;
             this.lblShiftPeriod.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblShiftPeriod.Location = new System.Drawing.Point(108, 132);
+            this.lblShiftPeriod.Location = new System.Drawing.Point(144, 162);
+            this.lblShiftPeriod.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblShiftPeriod.Name = "lblShiftPeriod";
-            this.lblShiftPeriod.Size = new System.Drawing.Size(77, 19);
+            this.lblShiftPeriod.Size = new System.Drawing.Size(96, 23);
             this.lblShiftPeriod.TabIndex = 14;
             this.lblShiftPeriod.Text = "مدة الوردية :";
             // 
@@ -282,10 +296,11 @@
             this.lblShiftPeriodValue.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblShiftPeriodValue.ForeColor = System.Drawing.Color.DeepPink;
             this.lblShiftPeriodValue.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblShiftPeriodValue.Location = new System.Drawing.Point(14, 132);
+            this.lblShiftPeriodValue.Location = new System.Drawing.Point(19, 162);
+            this.lblShiftPeriodValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblShiftPeriodValue.Name = "lblShiftPeriodValue";
             this.lblShiftPeriodValue.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblShiftPeriodValue.Size = new System.Drawing.Size(89, 29);
+            this.lblShiftPeriodValue.Size = new System.Drawing.Size(118, 35);
             this.lblShiftPeriodValue.TabIndex = 15;
             this.lblShiftPeriodValue.Text = "0";
             this.lblShiftPeriodValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -297,10 +312,11 @@
             this.lblCashOutValue.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCashOutValue.ForeColor = System.Drawing.Color.DeepPink;
             this.lblCashOutValue.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblCashOutValue.Location = new System.Drawing.Point(386, 132);
+            this.lblCashOutValue.Location = new System.Drawing.Point(515, 162);
+            this.lblCashOutValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCashOutValue.Name = "lblCashOutValue";
             this.lblCashOutValue.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblCashOutValue.Size = new System.Drawing.Size(89, 29);
+            this.lblCashOutValue.Size = new System.Drawing.Size(118, 35);
             this.lblCashOutValue.TabIndex = 16;
             this.lblCashOutValue.Text = "0";
             this.lblCashOutValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -311,9 +327,10 @@
             this.lblUserIn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserIn.ForeColor = System.Drawing.Color.MediumBlue;
             this.lblUserIn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblUserIn.Location = new System.Drawing.Point(640, 84);
+            this.lblUserIn.Location = new System.Drawing.Point(853, 103);
+            this.lblUserIn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUserIn.Name = "lblUserIn";
-            this.lblUserIn.Size = new System.Drawing.Size(102, 19);
+            this.lblUserIn.Size = new System.Drawing.Size(124, 23);
             this.lblUserIn.TabIndex = 17;
             this.lblUserIn.Text = "المستخدم الداخل :";
             // 
@@ -323,9 +340,10 @@
             this.lblCashOut.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCashOut.ForeColor = System.Drawing.Color.MediumBlue;
             this.lblCashOut.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblCashOut.Location = new System.Drawing.Point(481, 132);
+            this.lblCashOut.Location = new System.Drawing.Point(641, 162);
+            this.lblCashOut.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCashOut.Name = "lblCashOut";
-            this.lblCashOut.Size = new System.Drawing.Size(70, 19);
+            this.lblCashOut.Size = new System.Drawing.Size(86, 23);
             this.lblCashOut.TabIndex = 18;
             this.lblCashOut.Text = "في النهاية :";
             // 
@@ -336,9 +354,10 @@
             this.lblUserInName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserInName.ForeColor = System.Drawing.Color.DeepPink;
             this.lblUserInName.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblUserInName.Location = new System.Drawing.Point(386, 84);
+            this.lblUserInName.Location = new System.Drawing.Point(515, 103);
+            this.lblUserInName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUserInName.Name = "lblUserInName";
-            this.lblUserInName.Size = new System.Drawing.Size(258, 29);
+            this.lblUserInName.Size = new System.Drawing.Size(343, 35);
             this.lblUserInName.TabIndex = 19;
             this.lblUserInName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -349,9 +368,10 @@
             this.lblUserOutName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserOutName.ForeColor = System.Drawing.Color.DeepPink;
             this.lblUserOutName.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblUserOutName.Location = new System.Drawing.Point(14, 84);
+            this.lblUserOutName.Location = new System.Drawing.Point(19, 103);
+            this.lblUserOutName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUserOutName.Name = "lblUserOutName";
-            this.lblUserOutName.Size = new System.Drawing.Size(270, 29);
+            this.lblUserOutName.Size = new System.Drawing.Size(359, 35);
             this.lblUserOutName.TabIndex = 20;
             this.lblUserOutName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -361,9 +381,10 @@
             this.lblUserOut.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserOut.ForeColor = System.Drawing.Color.MediumBlue;
             this.lblUserOut.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblUserOut.Location = new System.Drawing.Point(283, 84);
+            this.lblUserOut.Location = new System.Drawing.Point(377, 103);
+            this.lblUserOut.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUserOut.Name = "lblUserOut";
-            this.lblUserOut.Size = new System.Drawing.Size(106, 19);
+            this.lblUserOut.Size = new System.Drawing.Size(130, 23);
             this.lblUserOut.TabIndex = 21;
             this.lblUserOut.Text = "المستخدم الخارج :";
             // 
@@ -373,9 +394,10 @@
             this.lblCashIn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCashIn.ForeColor = System.Drawing.Color.MediumBlue;
             this.lblCashIn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblCashIn.Location = new System.Drawing.Point(667, 132);
+            this.lblCashIn.Location = new System.Drawing.Point(889, 162);
+            this.lblCashIn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCashIn.Name = "lblCashIn";
-            this.lblCashIn.Size = new System.Drawing.Size(72, 19);
+            this.lblCashIn.Size = new System.Drawing.Size(88, 23);
             this.lblCashIn.TabIndex = 14;
             this.lblCashIn.Text = " في البداية :";
             // 
@@ -386,10 +408,11 @@
             this.lblCashInValue.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCashInValue.ForeColor = System.Drawing.Color.DeepPink;
             this.lblCashInValue.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblCashInValue.Location = new System.Drawing.Point(555, 132);
+            this.lblCashInValue.Location = new System.Drawing.Point(740, 162);
+            this.lblCashInValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCashInValue.Name = "lblCashInValue";
             this.lblCashInValue.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblCashInValue.Size = new System.Drawing.Size(89, 29);
+            this.lblCashInValue.Size = new System.Drawing.Size(118, 35);
             this.lblCashInValue.TabIndex = 15;
             this.lblCashInValue.Text = "0";
             this.lblCashInValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -400,9 +423,10 @@
             this.lblShiftBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblShiftBox.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.lblShiftBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblShiftBox.Location = new System.Drawing.Point(642, 110);
+            this.lblShiftBox.Location = new System.Drawing.Point(856, 135);
+            this.lblShiftBox.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblShiftBox.Name = "lblShiftBox";
-            this.lblShiftBox.Size = new System.Drawing.Size(91, 19);
+            this.lblShiftBox.Size = new System.Drawing.Size(111, 23);
             this.lblShiftBox.TabIndex = 14;
             this.lblShiftBox.Text = "قيمة الصندوق :";
             // 
@@ -412,9 +436,10 @@
             this.lblShiftStatus.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblShiftStatus.ForeColor = System.Drawing.Color.MediumBlue;
             this.lblShiftStatus.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblShiftStatus.Location = new System.Drawing.Point(301, 132);
+            this.lblShiftStatus.Location = new System.Drawing.Point(401, 162);
+            this.lblShiftStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblShiftStatus.Name = "lblShiftStatus";
-            this.lblShiftStatus.Size = new System.Drawing.Size(83, 19);
+            this.lblShiftStatus.Size = new System.Drawing.Size(102, 23);
             this.lblShiftStatus.TabIndex = 14;
             this.lblShiftStatus.Text = "حالة الوردية :";
             // 
@@ -425,9 +450,10 @@
             this.lblShiftStatusValue.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblShiftStatusValue.ForeColor = System.Drawing.Color.DeepPink;
             this.lblShiftStatusValue.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblShiftStatusValue.Location = new System.Drawing.Point(195, 132);
+            this.lblShiftStatusValue.Location = new System.Drawing.Point(260, 162);
+            this.lblShiftStatusValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblShiftStatusValue.Name = "lblShiftStatusValue";
-            this.lblShiftStatusValue.Size = new System.Drawing.Size(89, 29);
+            this.lblShiftStatusValue.Size = new System.Drawing.Size(118, 35);
             this.lblShiftStatusValue.TabIndex = 15;
             this.lblShiftStatusValue.Text = "غير منتهية";
             this.lblShiftStatusValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -438,9 +464,10 @@
             this.lblTotalInvoices.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalInvoices.ForeColor = System.Drawing.Color.MediumBlue;
             this.lblTotalInvoices.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblTotalInvoices.Location = new System.Drawing.Point(675, 17);
+            this.lblTotalInvoices.Location = new System.Drawing.Point(900, 21);
+            this.lblTotalInvoices.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalInvoices.Name = "lblTotalInvoices";
-            this.lblTotalInvoices.Size = new System.Drawing.Size(57, 19);
+            this.lblTotalInvoices.Size = new System.Drawing.Size(69, 23);
             this.lblTotalInvoices.TabIndex = 6;
             this.lblTotalInvoices.Text = "الفواتير :";
             // 
@@ -451,10 +478,11 @@
             this.lblTotalInvoicesValue.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalInvoicesValue.ForeColor = System.Drawing.Color.DeepPink;
             this.lblTotalInvoicesValue.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblTotalInvoicesValue.Location = new System.Drawing.Point(551, 17);
+            this.lblTotalInvoicesValue.Location = new System.Drawing.Point(735, 21);
+            this.lblTotalInvoicesValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalInvoicesValue.Name = "lblTotalInvoicesValue";
             this.lblTotalInvoicesValue.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTotalInvoicesValue.Size = new System.Drawing.Size(89, 29);
+            this.lblTotalInvoicesValue.Size = new System.Drawing.Size(118, 35);
             this.lblTotalInvoicesValue.TabIndex = 7;
             this.lblTotalInvoicesValue.Text = "0";
             this.lblTotalInvoicesValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -465,9 +493,10 @@
             this.lblExpenses.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblExpenses.ForeColor = System.Drawing.Color.MediumBlue;
             this.lblExpenses.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblExpenses.Location = new System.Drawing.Point(475, 17);
+            this.lblExpenses.Location = new System.Drawing.Point(633, 21);
+            this.lblExpenses.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblExpenses.Name = "lblExpenses";
-            this.lblExpenses.Size = new System.Drawing.Size(72, 19);
+            this.lblExpenses.Size = new System.Drawing.Size(88, 23);
             this.lblExpenses.TabIndex = 8;
             this.lblExpenses.Text = "المصاريف :";
             // 
@@ -478,10 +507,11 @@
             this.lblExpensesValue.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblExpensesValue.ForeColor = System.Drawing.Color.DeepPink;
             this.lblExpensesValue.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblExpensesValue.Location = new System.Drawing.Point(382, 17);
+            this.lblExpensesValue.Location = new System.Drawing.Point(509, 21);
+            this.lblExpensesValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblExpensesValue.Name = "lblExpensesValue";
             this.lblExpensesValue.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblExpensesValue.Size = new System.Drawing.Size(89, 29);
+            this.lblExpensesValue.Size = new System.Drawing.Size(118, 35);
             this.lblExpensesValue.TabIndex = 10;
             this.lblExpensesValue.Text = "0";
             this.lblExpensesValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -492,9 +522,10 @@
             this.lblBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBox.ForeColor = System.Drawing.Color.MediumBlue;
             this.lblBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblBox.Location = new System.Drawing.Point(316, 17);
+            this.lblBox.Location = new System.Drawing.Point(421, 21);
+            this.lblBox.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBox.Name = "lblBox";
-            this.lblBox.Size = new System.Drawing.Size(64, 19);
+            this.lblBox.Size = new System.Drawing.Size(79, 23);
             this.lblBox.TabIndex = 8;
             this.lblBox.Text = "الصندوق :";
             // 
@@ -505,10 +536,11 @@
             this.lblBoxValue.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBoxValue.ForeColor = System.Drawing.Color.DeepPink;
             this.lblBoxValue.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblBoxValue.Location = new System.Drawing.Point(191, 17);
+            this.lblBoxValue.Location = new System.Drawing.Point(255, 21);
+            this.lblBoxValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBoxValue.Name = "lblBoxValue";
             this.lblBoxValue.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblBoxValue.Size = new System.Drawing.Size(89, 29);
+            this.lblBoxValue.Size = new System.Drawing.Size(118, 35);
             this.lblBoxValue.TabIndex = 10;
             this.lblBoxValue.Text = "0";
             this.lblBoxValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -519,9 +551,10 @@
             this.lblLack.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLack.ForeColor = System.Drawing.Color.MediumBlue;
             this.lblLack.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblLack.Location = new System.Drawing.Point(107, 17);
+            this.lblLack.Location = new System.Drawing.Point(143, 21);
+            this.lblLack.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLack.Name = "lblLack";
-            this.lblLack.Size = new System.Drawing.Size(74, 19);
+            this.lblLack.Size = new System.Drawing.Size(89, 23);
             this.lblLack.TabIndex = 8;
             this.lblLack.Text = "قيمة العجز :";
             // 
@@ -532,10 +565,11 @@
             this.lblLackValue.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLackValue.ForeColor = System.Drawing.Color.DeepPink;
             this.lblLackValue.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblLackValue.Location = new System.Drawing.Point(10, 17);
+            this.lblLackValue.Location = new System.Drawing.Point(13, 21);
+            this.lblLackValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLackValue.Name = "lblLackValue";
             this.lblLackValue.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblLackValue.Size = new System.Drawing.Size(89, 29);
+            this.lblLackValue.Size = new System.Drawing.Size(118, 35);
             this.lblLackValue.TabIndex = 10;
             this.lblLackValue.Text = "0";
             this.lblLackValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -550,9 +584,11 @@
             this.grpbxTotals.Controls.Add(this.lblBoxValue);
             this.grpbxTotals.Controls.Add(this.lblLackValue);
             this.grpbxTotals.Controls.Add(this.lblBox);
-            this.grpbxTotals.Location = new System.Drawing.Point(4, 159);
+            this.grpbxTotals.Location = new System.Drawing.Point(5, 196);
+            this.grpbxTotals.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grpbxTotals.Name = "grpbxTotals";
-            this.grpbxTotals.Size = new System.Drawing.Size(730, 52);
+            this.grpbxTotals.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpbxTotals.Size = new System.Drawing.Size(973, 64);
             this.grpbxTotals.TabIndex = 22;
             this.grpbxTotals.TabStop = false;
             this.grpbxTotals.Text = "الإجماليات :";
@@ -567,9 +603,11 @@
             this.grpbxDates.Controls.Add(this.lblEndDate);
             this.grpbxDates.Controls.Add(this.lblEndTimeValue);
             this.grpbxDates.Controls.Add(this.lblEndDateValue);
-            this.grpbxDates.Location = new System.Drawing.Point(7, 26);
+            this.grpbxDates.Location = new System.Drawing.Point(9, 32);
+            this.grpbxDates.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grpbxDates.Name = "grpbxDates";
-            this.grpbxDates.Size = new System.Drawing.Size(730, 52);
+            this.grpbxDates.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpbxDates.Size = new System.Drawing.Size(973, 64);
             this.grpbxDates.TabIndex = 23;
             this.grpbxDates.TabStop = false;
             this.grpbxDates.Text = "التوقيتات :";
@@ -581,19 +619,21 @@
             this.tabcntShiftDetails.Controls.Add(this.tpStocktaking);
             this.tabcntShiftDetails.Controls.Add(this.tpExpenses);
             this.tabcntShiftDetails.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tabcntShiftDetails.Location = new System.Drawing.Point(0, 217);
+            this.tabcntShiftDetails.Location = new System.Drawing.Point(0, 267);
+            this.tabcntShiftDetails.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabcntShiftDetails.Name = "tabcntShiftDetails";
             this.tabcntShiftDetails.RightToLeftLayout = true;
             this.tabcntShiftDetails.SelectedIndex = 0;
-            this.tabcntShiftDetails.Size = new System.Drawing.Size(740, 272);
+            this.tabcntShiftDetails.Size = new System.Drawing.Size(987, 335);
             this.tabcntShiftDetails.TabIndex = 24;
             // 
             // tpItemsIn
             // 
             this.tpItemsIn.Controls.Add(this.dgvItemsIn);
-            this.tpItemsIn.Location = new System.Drawing.Point(4, 22);
+            this.tpItemsIn.Location = new System.Drawing.Point(4, 25);
+            this.tpItemsIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tpItemsIn.Name = "tpItemsIn";
-            this.tpItemsIn.Size = new System.Drawing.Size(732, 246);
+            this.tpItemsIn.Size = new System.Drawing.Size(979, 306);
             this.tpItemsIn.TabIndex = 3;
             this.tpItemsIn.Text = "الأصناف الداخلة";
             this.tpItemsIn.UseVisualStyleBackColor = true;
@@ -608,63 +648,25 @@
             this.dgtbxItemsInID,
             this.dgtbxItemsInDate,
             this.dgtbxcItemsInTime,
-            this.dgtbxcItemsInUserName});
+            this.dgtbxcItemsInUserName,
+            this.dgybxcSupplierName});
             this.dgvItemsIn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvItemsIn.Location = new System.Drawing.Point(0, 0);
+            this.dgvItemsIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvItemsIn.Name = "dgvItemsIn";
-            this.dgvItemsIn.Size = new System.Drawing.Size(732, 246);
+            this.dgvItemsIn.RowHeadersWidth = 51;
+            this.dgvItemsIn.Size = new System.Drawing.Size(979, 306);
             this.dgvItemsIn.TabIndex = 0;
             this.dgvItemsIn.DoubleClick += new System.EventHandler(this.dgvOperation_DoubleClick);
-            // 
-            // dgtbxItemsInID
-            // 
-            this.dgtbxItemsInID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgtbxItemsInID.DataPropertyName = "ID";
-            this.dgtbxItemsInID.HeaderText = "المسلسل";
-            this.dgtbxItemsInID.Name = "dgtbxItemsInID";
-            this.dgtbxItemsInID.ReadOnly = true;
-            this.dgtbxItemsInID.Width = 81;
-            // 
-            // dgtbxItemsInDate
-            // 
-            this.dgtbxItemsInDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgtbxItemsInDate.DataPropertyName = "InDate";
-            dataGridViewCellStyle1.Format = "d";
-            dataGridViewCellStyle1.NullValue = null;
-            this.dgtbxItemsInDate.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgtbxItemsInDate.HeaderText = "التاريخ";
-            this.dgtbxItemsInDate.Name = "dgtbxItemsInDate";
-            this.dgtbxItemsInDate.ReadOnly = true;
-            this.dgtbxItemsInDate.Width = 60;
-            // 
-            // dgtbxcItemsInTime
-            // 
-            this.dgtbxcItemsInTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgtbxcItemsInTime.DataPropertyName = "InDate";
-            dataGridViewCellStyle2.Format = "T";
-            dataGridViewCellStyle2.NullValue = null;
-            this.dgtbxcItemsInTime.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgtbxcItemsInTime.HeaderText = "الوقت";
-            this.dgtbxcItemsInTime.Name = "dgtbxcItemsInTime";
-            this.dgtbxcItemsInTime.ReadOnly = true;
-            this.dgtbxcItemsInTime.Width = 58;
-            // 
-            // dgtbxcItemsInUserName
-            // 
-            this.dgtbxcItemsInUserName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgtbxcItemsInUserName.DataPropertyName = "FullName";
-            this.dgtbxcItemsInUserName.HeaderText = "المستخدم";
-            this.dgtbxcItemsInUserName.Name = "dgtbxcItemsInUserName";
-            this.dgtbxcItemsInUserName.ReadOnly = true;
-            this.dgtbxcItemsInUserName.Width = 81;
             // 
             // tpInvoices
             // 
             this.tpInvoices.Controls.Add(this.dgvInvoices);
-            this.tpInvoices.Location = new System.Drawing.Point(4, 22);
+            this.tpInvoices.Location = new System.Drawing.Point(4, 25);
+            this.tpInvoices.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tpInvoices.Name = "tpInvoices";
-            this.tpInvoices.Padding = new System.Windows.Forms.Padding(3);
-            this.tpInvoices.Size = new System.Drawing.Size(732, 246);
+            this.tpInvoices.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpInvoices.Size = new System.Drawing.Size(979, 306);
             this.tpInvoices.TabIndex = 0;
             this.tpInvoices.Text = "الفواتير";
             this.tpInvoices.UseVisualStyleBackColor = true;
@@ -682,9 +684,11 @@
             this.dgtbxcInvoiceUserName,
             this.dgtbxcInvoiceTotal});
             this.dgvInvoices.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvInvoices.Location = new System.Drawing.Point(3, 3);
+            this.dgvInvoices.Location = new System.Drawing.Point(4, 4);
+            this.dgvInvoices.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvInvoices.Name = "dgvInvoices";
-            this.dgvInvoices.Size = new System.Drawing.Size(726, 240);
+            this.dgvInvoices.RowHeadersWidth = 51;
+            this.dgvInvoices.Size = new System.Drawing.Size(971, 298);
             this.dgvInvoices.TabIndex = 1;
             this.dgvInvoices.DoubleClick += new System.EventHandler(this.dgvOperation_DoubleClick);
             // 
@@ -693,9 +697,10 @@
             this.dgtbxcInvoiceID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dgtbxcInvoiceID.DataPropertyName = "ID";
             this.dgtbxcInvoiceID.HeaderText = "المسلسل";
+            this.dgtbxcInvoiceID.MinimumWidth = 6;
             this.dgtbxcInvoiceID.Name = "dgtbxcInvoiceID";
             this.dgtbxcInvoiceID.ReadOnly = true;
-            this.dgtbxcInvoiceID.Width = 81;
+            this.dgtbxcInvoiceID.Width = 76;
             // 
             // dgtbxcInvoiceDate
             // 
@@ -705,9 +710,10 @@
             dataGridViewCellStyle3.NullValue = null;
             this.dgtbxcInvoiceDate.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgtbxcInvoiceDate.HeaderText = "التاريخ";
+            this.dgtbxcInvoiceDate.MinimumWidth = 6;
             this.dgtbxcInvoiceDate.Name = "dgtbxcInvoiceDate";
             this.dgtbxcInvoiceDate.ReadOnly = true;
-            this.dgtbxcInvoiceDate.Width = 60;
+            this.dgtbxcInvoiceDate.Width = 70;
             // 
             // dgtbxcInvoiceTime
             // 
@@ -717,18 +723,20 @@
             dataGridViewCellStyle4.NullValue = null;
             this.dgtbxcInvoiceTime.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgtbxcInvoiceTime.HeaderText = "الوقت";
+            this.dgtbxcInvoiceTime.MinimumWidth = 6;
             this.dgtbxcInvoiceTime.Name = "dgtbxcInvoiceTime";
             this.dgtbxcInvoiceTime.ReadOnly = true;
-            this.dgtbxcInvoiceTime.Width = 58;
+            this.dgtbxcInvoiceTime.Width = 63;
             // 
             // dgtbxcInvoiceUserName
             // 
             this.dgtbxcInvoiceUserName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dgtbxcInvoiceUserName.DataPropertyName = "FullName";
             this.dgtbxcInvoiceUserName.HeaderText = "المستخدم";
+            this.dgtbxcInvoiceUserName.MinimumWidth = 6;
             this.dgtbxcInvoiceUserName.Name = "dgtbxcInvoiceUserName";
             this.dgtbxcInvoiceUserName.ReadOnly = true;
-            this.dgtbxcInvoiceUserName.Width = 81;
+            this.dgtbxcInvoiceUserName.Width = 79;
             // 
             // dgtbxcInvoiceTotal
             // 
@@ -738,17 +746,19 @@
             dataGridViewCellStyle5.NullValue = null;
             this.dgtbxcInvoiceTotal.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgtbxcInvoiceTotal.HeaderText = "الإجمالي";
+            this.dgtbxcInvoiceTotal.MinimumWidth = 6;
             this.dgtbxcInvoiceTotal.Name = "dgtbxcInvoiceTotal";
             this.dgtbxcInvoiceTotal.ReadOnly = true;
-            this.dgtbxcInvoiceTotal.Width = 73;
+            this.dgtbxcInvoiceTotal.Width = 78;
             // 
             // tpStocktaking
             // 
             this.tpStocktaking.Controls.Add(this.dgvStocktaking);
-            this.tpStocktaking.Location = new System.Drawing.Point(4, 22);
+            this.tpStocktaking.Location = new System.Drawing.Point(4, 25);
+            this.tpStocktaking.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tpStocktaking.Name = "tpStocktaking";
-            this.tpStocktaking.Padding = new System.Windows.Forms.Padding(3);
-            this.tpStocktaking.Size = new System.Drawing.Size(732, 246);
+            this.tpStocktaking.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpStocktaking.Size = new System.Drawing.Size(979, 306);
             this.tpStocktaking.TabIndex = 1;
             this.tpStocktaking.Text = "الجرد";
             this.tpStocktaking.UseVisualStyleBackColor = true;
@@ -765,9 +775,11 @@
             this.dgtbxcStocktakingTime,
             this.dgtbxcStocktakingUserName});
             this.dgvStocktaking.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvStocktaking.Location = new System.Drawing.Point(3, 3);
+            this.dgvStocktaking.Location = new System.Drawing.Point(4, 4);
+            this.dgvStocktaking.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvStocktaking.Name = "dgvStocktaking";
-            this.dgvStocktaking.Size = new System.Drawing.Size(726, 240);
+            this.dgvStocktaking.RowHeadersWidth = 51;
+            this.dgvStocktaking.Size = new System.Drawing.Size(971, 298);
             this.dgvStocktaking.TabIndex = 1;
             this.dgvStocktaking.DoubleClick += new System.EventHandler(this.dgvOperation_DoubleClick);
             // 
@@ -776,9 +788,10 @@
             this.dgtbxcStocktakingID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dgtbxcStocktakingID.DataPropertyName = "ID";
             this.dgtbxcStocktakingID.HeaderText = "المسلسل";
+            this.dgtbxcStocktakingID.MinimumWidth = 6;
             this.dgtbxcStocktakingID.Name = "dgtbxcStocktakingID";
             this.dgtbxcStocktakingID.ReadOnly = true;
-            this.dgtbxcStocktakingID.Width = 81;
+            this.dgtbxcStocktakingID.Width = 76;
             // 
             // dgtbxcStocktakingDate
             // 
@@ -787,9 +800,10 @@
             dataGridViewCellStyle6.Format = "d";
             this.dgtbxcStocktakingDate.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgtbxcStocktakingDate.HeaderText = "التاريخ";
+            this.dgtbxcStocktakingDate.MinimumWidth = 6;
             this.dgtbxcStocktakingDate.Name = "dgtbxcStocktakingDate";
             this.dgtbxcStocktakingDate.ReadOnly = true;
-            this.dgtbxcStocktakingDate.Width = 60;
+            this.dgtbxcStocktakingDate.Width = 70;
             // 
             // dgtbxcStocktakingTime
             // 
@@ -798,24 +812,27 @@
             dataGridViewCellStyle7.Format = "T";
             this.dgtbxcStocktakingTime.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgtbxcStocktakingTime.HeaderText = "الوقت";
+            this.dgtbxcStocktakingTime.MinimumWidth = 6;
             this.dgtbxcStocktakingTime.Name = "dgtbxcStocktakingTime";
-            this.dgtbxcStocktakingTime.Width = 58;
+            this.dgtbxcStocktakingTime.Width = 63;
             // 
             // dgtbxcStocktakingUserName
             // 
             this.dgtbxcStocktakingUserName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dgtbxcStocktakingUserName.DataPropertyName = "FullName";
             this.dgtbxcStocktakingUserName.HeaderText = "المستخدم";
+            this.dgtbxcStocktakingUserName.MinimumWidth = 6;
             this.dgtbxcStocktakingUserName.Name = "dgtbxcStocktakingUserName";
             this.dgtbxcStocktakingUserName.ReadOnly = true;
-            this.dgtbxcStocktakingUserName.Width = 81;
+            this.dgtbxcStocktakingUserName.Width = 79;
             // 
             // tpExpenses
             // 
             this.tpExpenses.Controls.Add(this.dgvExpenses);
-            this.tpExpenses.Location = new System.Drawing.Point(4, 22);
+            this.tpExpenses.Location = new System.Drawing.Point(4, 25);
+            this.tpExpenses.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tpExpenses.Name = "tpExpenses";
-            this.tpExpenses.Size = new System.Drawing.Size(732, 246);
+            this.tpExpenses.Size = new System.Drawing.Size(1308, 306);
             this.tpExpenses.TabIndex = 2;
             this.tpExpenses.Text = "المصاريف";
             this.tpExpenses.UseVisualStyleBackColor = true;
@@ -834,8 +851,10 @@
             this.dgvtbxcExpensesValue});
             this.dgvExpenses.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvExpenses.Location = new System.Drawing.Point(0, 0);
+            this.dgvExpenses.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvExpenses.Name = "dgvExpenses";
-            this.dgvExpenses.Size = new System.Drawing.Size(732, 246);
+            this.dgvExpenses.RowHeadersWidth = 51;
+            this.dgvExpenses.Size = new System.Drawing.Size(1308, 306);
             this.dgvExpenses.TabIndex = 2;
             this.dgvExpenses.DoubleClick += new System.EventHandler(this.dgvOperation_DoubleClick);
             // 
@@ -844,18 +863,20 @@
             this.dgtbxcExpensesID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dgtbxcExpensesID.DataPropertyName = "ID";
             this.dgtbxcExpensesID.HeaderText = "مسلسل";
+            this.dgtbxcExpensesID.MinimumWidth = 6;
             this.dgtbxcExpensesID.Name = "dgtbxcExpensesID";
             this.dgtbxcExpensesID.ReadOnly = true;
-            this.dgtbxcExpensesID.Width = 74;
+            this.dgtbxcExpensesID.Width = 70;
             // 
             // dgvtbxcExpensesType
             // 
             this.dgvtbxcExpensesType.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dgvtbxcExpensesType.DataPropertyName = "TypeName";
             this.dgvtbxcExpensesType.HeaderText = "النوع";
+            this.dgvtbxcExpensesType.MinimumWidth = 6;
             this.dgvtbxcExpensesType.Name = "dgvtbxcExpensesType";
             this.dgvtbxcExpensesType.ReadOnly = true;
-            this.dgvtbxcExpensesType.Width = 54;
+            this.dgvtbxcExpensesType.Width = 60;
             // 
             // dgvtbxcExpensesStatement
             // 
@@ -864,9 +885,10 @@
             dataGridViewCellStyle8.NullValue = " ";
             this.dgvtbxcExpensesStatement.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvtbxcExpensesStatement.HeaderText = "البيان";
+            this.dgvtbxcExpensesStatement.MinimumWidth = 6;
             this.dgvtbxcExpensesStatement.Name = "dgvtbxcExpensesStatement";
             this.dgvtbxcExpensesStatement.ReadOnly = true;
-            this.dgvtbxcExpensesStatement.Width = 56;
+            this.dgvtbxcExpensesStatement.Width = 62;
             // 
             // dgvtbxcExpensesRemarks
             // 
@@ -875,9 +897,10 @@
             dataGridViewCellStyle9.NullValue = " ";
             this.dgvtbxcExpensesRemarks.DefaultCellStyle = dataGridViewCellStyle9;
             this.dgvtbxcExpensesRemarks.HeaderText = "ملاحظات";
+            this.dgvtbxcExpensesRemarks.MinimumWidth = 6;
             this.dgvtbxcExpensesRemarks.Name = "dgvtbxcExpensesRemarks";
             this.dgvtbxcExpensesRemarks.ReadOnly = true;
-            this.dgvtbxcExpensesRemarks.Width = 73;
+            this.dgvtbxcExpensesRemarks.Width = 79;
             // 
             // dgvtbxcExpensesValue
             // 
@@ -886,14 +909,70 @@
             dataGridViewCellStyle10.Format = "N2";
             this.dgvtbxcExpensesValue.DefaultCellStyle = dataGridViewCellStyle10;
             this.dgvtbxcExpensesValue.HeaderText = "القيمة";
+            this.dgvtbxcExpensesValue.MinimumWidth = 6;
             this.dgvtbxcExpensesValue.Name = "dgvtbxcExpensesValue";
             this.dgvtbxcExpensesValue.ReadOnly = true;
-            this.dgvtbxcExpensesValue.Width = 61;
+            this.dgvtbxcExpensesValue.Width = 62;
+            // 
+            // dgtbxItemsInID
+            // 
+            this.dgtbxItemsInID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgtbxItemsInID.DataPropertyName = "ID";
+            this.dgtbxItemsInID.HeaderText = "المسلسل";
+            this.dgtbxItemsInID.MinimumWidth = 6;
+            this.dgtbxItemsInID.Name = "dgtbxItemsInID";
+            this.dgtbxItemsInID.ReadOnly = true;
+            this.dgtbxItemsInID.Width = 76;
+            // 
+            // dgtbxItemsInDate
+            // 
+            this.dgtbxItemsInDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgtbxItemsInDate.DataPropertyName = "InDate";
+            dataGridViewCellStyle1.Format = "d";
+            dataGridViewCellStyle1.NullValue = null;
+            this.dgtbxItemsInDate.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgtbxItemsInDate.HeaderText = "التاريخ";
+            this.dgtbxItemsInDate.MinimumWidth = 6;
+            this.dgtbxItemsInDate.Name = "dgtbxItemsInDate";
+            this.dgtbxItemsInDate.ReadOnly = true;
+            this.dgtbxItemsInDate.Width = 70;
+            // 
+            // dgtbxcItemsInTime
+            // 
+            this.dgtbxcItemsInTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgtbxcItemsInTime.DataPropertyName = "InDate";
+            dataGridViewCellStyle2.Format = "T";
+            dataGridViewCellStyle2.NullValue = null;
+            this.dgtbxcItemsInTime.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgtbxcItemsInTime.HeaderText = "الوقت";
+            this.dgtbxcItemsInTime.MinimumWidth = 6;
+            this.dgtbxcItemsInTime.Name = "dgtbxcItemsInTime";
+            this.dgtbxcItemsInTime.ReadOnly = true;
+            this.dgtbxcItemsInTime.Width = 63;
+            // 
+            // dgtbxcItemsInUserName
+            // 
+            this.dgtbxcItemsInUserName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgtbxcItemsInUserName.DataPropertyName = "FullName";
+            this.dgtbxcItemsInUserName.HeaderText = "المستخدم";
+            this.dgtbxcItemsInUserName.MinimumWidth = 6;
+            this.dgtbxcItemsInUserName.Name = "dgtbxcItemsInUserName";
+            this.dgtbxcItemsInUserName.ReadOnly = true;
+            this.dgtbxcItemsInUserName.Width = 79;
+            // 
+            // dgybxcSupplierName
+            // 
+            this.dgybxcSupplierName.DataPropertyName = "SupplierName";
+            this.dgybxcSupplierName.HeaderText = "اسم المورد";
+            this.dgybxcSupplierName.MinimumWidth = 6;
+            this.dgybxcSupplierName.Name = "dgybxcSupplierName";
+            this.dgybxcSupplierName.Width = 125;
             // 
             // frmShiftDetails
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(742, 516);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.ClientSize = new System.Drawing.Size(989, 635);
+            this.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.Name = "frmShiftDetails";
             this.Text = "مدير الأصناف - تفاصيل الورديات";
             this.pnlControls.ResumeLayout(false);
@@ -959,10 +1038,6 @@
         private System.Windows.Forms.DataGridView dgvInvoices;
         private System.Windows.Forms.DataGridView dgvExpenses;
         private System.Windows.Forms.DataGridView dgvStocktaking;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgtbxItemsInID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgtbxItemsInDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgtbxcItemsInTime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgtbxcItemsInUserName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgtbxcInvoiceID;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgtbxcInvoiceDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgtbxcInvoiceTime;
@@ -977,5 +1052,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvtbxcExpensesStatement;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvtbxcExpensesRemarks;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvtbxcExpensesValue;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgtbxItemsInID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgtbxItemsInDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgtbxcItemsInTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgtbxcItemsInUserName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgybxcSupplierName;
     }
 }
