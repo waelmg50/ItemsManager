@@ -159,7 +159,7 @@ namespace Utilities
         #endregion
 
         #region Common Functions
-        
+
         /// <summary>
         /// Get ID based on Name
         /// </summary>
@@ -200,9 +200,9 @@ namespace Utilities
                     return 0;
                 else
                     if (Helper.CheckNumberInt(MyReturnedValue))
-                        return (Convert.ToInt32(MyReturnedValue));
-                    else
-                        return 0;
+                    return (Convert.ToInt32(MyReturnedValue));
+                else
+                    return 0;
             }
             catch (Exception ex)
             {
@@ -268,7 +268,7 @@ namespace Utilities
         {
             try
             {
-                return IsDataExists(tblName, columnName, value,ID, null);
+                return IsDataExists(tblName, columnName, value, ID, null);
             }
             catch (Exception ex)
             {
@@ -293,9 +293,18 @@ namespace Utilities
                 //Create the parameter collection of the table insert command.
                 SqlParameter[] sqlprmComParam = new SqlParameter[5];
                 sqlprmComParam[0] = new SqlParameter("@TableName", tblName);
-                sqlprmComParam[1] = new SqlParameter("@ColumnName", columnName);
-                sqlprmComParam[2] = new SqlParameter("@Value", value);
-                sqlprmComParam[3] = new SqlParameter("@ID", ID);
+                if (string.IsNullOrWhiteSpace(columnName))
+                    sqlprmComParam[1] = new SqlParameter("@ColumnName", DBNull.Value);
+                else
+                    sqlprmComParam[1] = new SqlParameter("@ColumnName", columnName);
+                if (string.IsNullOrWhiteSpace(value))
+                    sqlprmComParam[2] = new SqlParameter("@Value", DBNull.Value);
+                else
+                    sqlprmComParam[2] = new SqlParameter("@Value", value);
+                if (ID <= 0)
+                    sqlprmComParam[3] = new SqlParameter("@ID", DBNull.Value);
+                else
+                    sqlprmComParam[3] = new SqlParameter("@ID", ID);
                 if (Condition == null)
                     sqlprmComParam[4] = new SqlParameter("@Condition", DBNull.Value);
                 else
@@ -334,7 +343,7 @@ namespace Utilities
                 return OrginalDataTable;
             }
         }
-        
+
         #endregion
 
     }

@@ -9,6 +9,12 @@ namespace ItemsManager
     static class Program
     {
 
+        #region Members
+
+        public static DevExpressReports.DevExpressReportStorage ReportStorage { get; set; } = new DevExpressReports.DevExpressReportStorage();
+
+        #endregion
+
         #region Entry Point
 
         /// <summary>

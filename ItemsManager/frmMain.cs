@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DevExpress.XtraReports.UserDesigner;
+using ItemsManager.DevExpressReports;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -450,5 +452,19 @@ namespace ItemsManager
 
         #endregion
 
+        private void tsmiDesignNewReport_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                XRDesignRibbonForm frmDesignReport = new XRDesignRibbonForm();
+                frmDesignReport.ShowDialog(this);
+                //frmDesignReports frmDsnReports = new frmDesignReports();
+                //frmDsnReports.ShowDialog(this);
+            }
+            catch(Exception ex)
+            {
+                ErrorHandler.LogError(ex);
+            }
+        }
     }
 }

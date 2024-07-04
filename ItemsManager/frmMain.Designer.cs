@@ -65,6 +65,7 @@
             this.tsmiExchanges = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiBills = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiItemsInReport = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiDesignNewReport = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.errprvForm)).BeginInit();
             this.pnlControls.SuspendLayout();
             this.msMain.SuspendLayout();
@@ -78,12 +79,14 @@
             this.pnlControls.Controls.Add(this.msMain);
             this.pnlControls.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlControls.Location = new System.Drawing.Point(0, 0);
+            this.pnlControls.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlControls.Name = "pnlControls";
-            this.pnlControls.Size = new System.Drawing.Size(742, 516);
+            this.pnlControls.Size = new System.Drawing.Size(989, 635);
             this.pnlControls.TabIndex = 0;
             // 
             // msMain
             // 
+            this.msMain.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.msMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiFile,
             this.tsmiBasicData,
@@ -93,7 +96,7 @@
             this.tsmiReports});
             this.msMain.Location = new System.Drawing.Point(0, 0);
             this.msMain.Name = "msMain";
-            this.msMain.Size = new System.Drawing.Size(742, 24);
+            this.msMain.Size = new System.Drawing.Size(989, 28);
             this.msMain.TabIndex = 0;
             this.msMain.Text = "menuStrip1";
             // 
@@ -104,27 +107,27 @@
             this.tsmiTempClose,
             this.tsmiExit});
             this.tsmiFile.Name = "tsmiFile";
-            this.tsmiFile.Size = new System.Drawing.Size(42, 20);
+            this.tsmiFile.Size = new System.Drawing.Size(52, 24);
             this.tsmiFile.Text = "ملف";
             // 
             // tsmiRestart
             // 
             this.tsmiRestart.Name = "tsmiRestart";
-            this.tsmiRestart.Size = new System.Drawing.Size(142, 22);
+            this.tsmiRestart.Size = new System.Drawing.Size(180, 26);
             this.tsmiRestart.Text = "إعادة التشغيل";
             this.tsmiRestart.Click += new System.EventHandler(this.tsmiRestart_Click);
             // 
             // tsmiTempClose
             // 
             this.tsmiTempClose.Name = "tsmiTempClose";
-            this.tsmiTempClose.Size = new System.Drawing.Size(142, 22);
+            this.tsmiTempClose.Size = new System.Drawing.Size(180, 26);
             this.tsmiTempClose.Text = "خروج مؤقت";
             this.tsmiTempClose.Click += new System.EventHandler(this.tsmiTempClose_Click);
             // 
             // tsmiExit
             // 
             this.tsmiExit.Name = "tsmiExit";
-            this.tsmiExit.Size = new System.Drawing.Size(142, 22);
+            this.tsmiExit.Size = new System.Drawing.Size(180, 26);
             this.tsmiExit.Text = "إغلاق البرنامج";
             this.tsmiExit.Click += new System.EventHandler(this.tsmiExit_Click);
             // 
@@ -137,7 +140,7 @@
             this.tsmiSuppliersTypes,
             this.tsmiSuppliersAndCustomers});
             this.tsmiBasicData.Name = "tsmiBasicData";
-            this.tsmiBasicData.Size = new System.Drawing.Size(101, 20);
+            this.tsmiBasicData.Size = new System.Drawing.Size(129, 24);
             this.tsmiBasicData.Text = "البيانات الأساسية";
             // 
             // tsmiMainUnits
@@ -147,27 +150,27 @@
             this.tsmiUnits,
             this.tsmiUnitsConversions});
             this.tsmiMainUnits.Name = "tsmiMainUnits";
-            this.tsmiMainUnits.Size = new System.Drawing.Size(183, 22);
+            this.tsmiMainUnits.Size = new System.Drawing.Size(233, 26);
             this.tsmiMainUnits.Text = "الوحدات";
             // 
             // tsmiUnitsTypes
             // 
             this.tsmiUnitsTypes.Name = "tsmiUnitsTypes";
-            this.tsmiUnitsTypes.Size = new System.Drawing.Size(157, 22);
+            this.tsmiUnitsTypes.Size = new System.Drawing.Size(199, 26);
             this.tsmiUnitsTypes.Text = "أنواع الوحدات";
             this.tsmiUnitsTypes.Click += new System.EventHandler(this.tsmiUnitsTypes_Click);
             // 
             // tsmiUnits
             // 
             this.tsmiUnits.Name = "tsmiUnits";
-            this.tsmiUnits.Size = new System.Drawing.Size(157, 22);
+            this.tsmiUnits.Size = new System.Drawing.Size(199, 26);
             this.tsmiUnits.Text = "الوحدات";
             this.tsmiUnits.Click += new System.EventHandler(this.tsmiUnits_Click);
             // 
             // tsmiUnitsConversions
             // 
             this.tsmiUnitsConversions.Name = "tsmiUnitsConversions";
-            this.tsmiUnitsConversions.Size = new System.Drawing.Size(157, 22);
+            this.tsmiUnitsConversions.Size = new System.Drawing.Size(199, 26);
             this.tsmiUnitsConversions.Text = "تحويلات الوحدات";
             this.tsmiUnitsConversions.Click += new System.EventHandler(this.tsmiUnitsConversions_Click);
             // 
@@ -179,55 +182,55 @@
             this.tsmiItemsUnits,
             this.tsmiItemsUnitsConversions});
             this.tsmiMainItems.Name = "tsmiMainItems";
-            this.tsmiMainItems.Size = new System.Drawing.Size(183, 22);
+            this.tsmiMainItems.Size = new System.Drawing.Size(233, 26);
             this.tsmiMainItems.Text = "الأصناف";
             // 
             // tsmiItemsCotegories
             // 
             this.tsmiItemsCotegories.Name = "tsmiItemsCotegories";
-            this.tsmiItemsCotegories.Size = new System.Drawing.Size(194, 22);
+            this.tsmiItemsCotegories.Size = new System.Drawing.Size(246, 26);
             this.tsmiItemsCotegories.Text = "تصنيفات الأصناف";
             this.tsmiItemsCotegories.Click += new System.EventHandler(this.tsmiItemsCotegories_Click);
             // 
             // tsmiItems
             // 
             this.tsmiItems.Name = "tsmiItems";
-            this.tsmiItems.Size = new System.Drawing.Size(194, 22);
+            this.tsmiItems.Size = new System.Drawing.Size(246, 26);
             this.tsmiItems.Text = "الأصناف";
             this.tsmiItems.Click += new System.EventHandler(this.tsmiItems_Click);
             // 
             // tsmiItemsUnits
             // 
             this.tsmiItemsUnits.Name = "tsmiItemsUnits";
-            this.tsmiItemsUnits.Size = new System.Drawing.Size(194, 22);
+            this.tsmiItemsUnits.Size = new System.Drawing.Size(246, 26);
             this.tsmiItemsUnits.Text = "وحدات الأصناف";
             this.tsmiItemsUnits.Click += new System.EventHandler(this.tsmiItemsUnits_Click);
             // 
             // tsmiItemsUnitsConversions
             // 
             this.tsmiItemsUnitsConversions.Name = "tsmiItemsUnitsConversions";
-            this.tsmiItemsUnitsConversions.Size = new System.Drawing.Size(194, 22);
+            this.tsmiItemsUnitsConversions.Size = new System.Drawing.Size(246, 26);
             this.tsmiItemsUnitsConversions.Text = "تحويلات وحدات الأصناف";
             this.tsmiItemsUnitsConversions.Click += new System.EventHandler(this.tsmiItemsUnitsConversions_Click);
             // 
             // tsmiExpensesTypes
             // 
             this.tsmiExpensesTypes.Name = "tsmiExpensesTypes";
-            this.tsmiExpensesTypes.Size = new System.Drawing.Size(183, 22);
+            this.tsmiExpensesTypes.Size = new System.Drawing.Size(233, 26);
             this.tsmiExpensesTypes.Text = "أنواع المصاريف";
             this.tsmiExpensesTypes.Click += new System.EventHandler(this.tsmiExpensesTypes_Click);
             // 
             // tsmiSuppliersTypes
             // 
             this.tsmiSuppliersTypes.Name = "tsmiSuppliersTypes";
-            this.tsmiSuppliersTypes.Size = new System.Drawing.Size(183, 22);
+            this.tsmiSuppliersTypes.Size = new System.Drawing.Size(233, 26);
             this.tsmiSuppliersTypes.Text = "أنواع الموردين والعملاء";
             this.tsmiSuppliersTypes.Click += new System.EventHandler(this.tsmiSuppliersTypes_Click);
             // 
             // tsmiSuppliersAndCustomers
             // 
             this.tsmiSuppliersAndCustomers.Name = "tsmiSuppliersAndCustomers";
-            this.tsmiSuppliersAndCustomers.Size = new System.Drawing.Size(183, 22);
+            this.tsmiSuppliersAndCustomers.Size = new System.Drawing.Size(233, 26);
             this.tsmiSuppliersAndCustomers.Text = "الموردين والعملاء";
             this.tsmiSuppliersAndCustomers.Click += new System.EventHandler(this.tsmiSuppliersAndCustomers_Click);
             // 
@@ -240,34 +243,34 @@
             this.tsmiExpenses,
             this.tsmiShifts});
             this.tsmiOperations.Name = "tsmiOperations";
-            this.tsmiOperations.Size = new System.Drawing.Size(62, 20);
+            this.tsmiOperations.Size = new System.Drawing.Size(78, 24);
             this.tsmiOperations.Text = "العمليات";
             // 
             // tsmiItemsIn
             // 
             this.tsmiItemsIn.Name = "tsmiItemsIn";
-            this.tsmiItemsIn.Size = new System.Drawing.Size(152, 22);
+            this.tsmiItemsIn.Size = new System.Drawing.Size(167, 26);
             this.tsmiItemsIn.Text = "فواتير الشراء";
             this.tsmiItemsIn.Click += new System.EventHandler(this.tsmiItemsIn_Click);
             // 
             // tsmiInvoices
             // 
             this.tsmiInvoices.Name = "tsmiInvoices";
-            this.tsmiInvoices.Size = new System.Drawing.Size(152, 22);
+            this.tsmiInvoices.Size = new System.Drawing.Size(167, 26);
             this.tsmiInvoices.Text = "فواتير البيع";
             this.tsmiInvoices.Click += new System.EventHandler(this.tsmiInvoices_Click);
             // 
             // tsmiStocktaking
             // 
             this.tsmiStocktaking.Name = "tsmiStocktaking";
-            this.tsmiStocktaking.Size = new System.Drawing.Size(152, 22);
+            this.tsmiStocktaking.Size = new System.Drawing.Size(167, 26);
             this.tsmiStocktaking.Text = "جرد المحل";
             this.tsmiStocktaking.Click += new System.EventHandler(this.tsmiStocktaking_Click);
             // 
             // tsmiExpenses
             // 
             this.tsmiExpenses.Name = "tsmiExpenses";
-            this.tsmiExpenses.Size = new System.Drawing.Size(152, 22);
+            this.tsmiExpenses.Size = new System.Drawing.Size(167, 26);
             this.tsmiExpenses.Text = "المصاريف";
             this.tsmiExpenses.Click += new System.EventHandler(this.tsmiExpenses_Click);
             // 
@@ -277,20 +280,20 @@
             this.tsmiShiftDetails,
             this.tsmiCloseShift});
             this.tsmiShifts.Name = "tsmiShifts";
-            this.tsmiShifts.Size = new System.Drawing.Size(152, 22);
+            this.tsmiShifts.Size = new System.Drawing.Size(167, 26);
             this.tsmiShifts.Text = "الورديات";
             // 
             // tsmiShiftDetails
             // 
             this.tsmiShiftDetails.Name = "tsmiShiftDetails";
-            this.tsmiShiftDetails.Size = new System.Drawing.Size(155, 22);
+            this.tsmiShiftDetails.Size = new System.Drawing.Size(196, 26);
             this.tsmiShiftDetails.Text = "تفاصيل الورديات";
             this.tsmiShiftDetails.Click += new System.EventHandler(this.tsmiShiftDetails_Click);
             // 
             // tsmiCloseShift
             // 
             this.tsmiCloseShift.Name = "tsmiCloseShift";
-            this.tsmiCloseShift.Size = new System.Drawing.Size(155, 22);
+            this.tsmiCloseShift.Size = new System.Drawing.Size(196, 26);
             this.tsmiCloseShift.Text = "إغلاق الوردية";
             this.tsmiCloseShift.Click += new System.EventHandler(this.tsmiCloseShift_Click);
             // 
@@ -299,13 +302,13 @@
             this.tsmiSecurity.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiUsers});
             this.tsmiSecurity.Name = "tsmiSecurity";
-            this.tsmiSecurity.Size = new System.Drawing.Size(85, 20);
+            this.tsmiSecurity.Size = new System.Drawing.Size(108, 24);
             this.tsmiSecurity.Text = "حماية البرنامج";
             // 
             // tsmiUsers
             // 
             this.tsmiUsers.Name = "tsmiUsers";
-            this.tsmiUsers.Size = new System.Drawing.Size(152, 22);
+            this.tsmiUsers.Size = new System.Drawing.Size(169, 26);
             this.tsmiUsers.Text = "المستخدمين";
             this.tsmiUsers.Click += new System.EventHandler(this.tsmiUsers_Click);
             // 
@@ -315,20 +318,20 @@
             this.tsmiBackupDatabase,
             this.tsmiConnectOrRestoreDatabase});
             this.tsmiData.Name = "tsmiData";
-            this.tsmiData.Size = new System.Drawing.Size(55, 20);
+            this.tsmiData.Size = new System.Drawing.Size(69, 24);
             this.tsmiData.Text = "البيانات";
             // 
             // tsmiBackupDatabase
             // 
             this.tsmiBackupDatabase.Name = "tsmiBackupDatabase";
-            this.tsmiBackupDatabase.Size = new System.Drawing.Size(227, 22);
+            this.tsmiBackupDatabase.Size = new System.Drawing.Size(289, 26);
             this.tsmiBackupDatabase.Text = "عمل نسخة احتياطية من البيانات";
             this.tsmiBackupDatabase.Click += new System.EventHandler(this.tsmiBackupDatabase_Click);
             // 
             // tsmiConnectOrRestoreDatabase
             // 
             this.tsmiConnectOrRestoreDatabase.Name = "tsmiConnectOrRestoreDatabase";
-            this.tsmiConnectOrRestoreDatabase.Size = new System.Drawing.Size(227, 22);
+            this.tsmiConnectOrRestoreDatabase.Size = new System.Drawing.Size(289, 26);
             this.tsmiConnectOrRestoreDatabase.Text = "اتصال - استرجاع قاعدة البيانات";
             this.tsmiConnectOrRestoreDatabase.Click += new System.EventHandler(this.tsmiConnectOrRestoreDatabase_Click);
             // 
@@ -337,40 +340,49 @@
             this.tsmiReports.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiExchanges,
             this.tsmiBills,
-            this.tsmiItemsInReport});
+            this.tsmiItemsInReport,
+            this.tsmiDesignNewReport});
             this.tsmiReports.Name = "tsmiReports";
-            this.tsmiReports.Size = new System.Drawing.Size(54, 20);
+            this.tsmiReports.Size = new System.Drawing.Size(67, 24);
             this.tsmiReports.Text = "التقارير";
             // 
             // tsmiExchanges
             // 
             this.tsmiExchanges.Name = "tsmiExchanges";
-            this.tsmiExchanges.Size = new System.Drawing.Size(152, 22);
+            this.tsmiExchanges.Size = new System.Drawing.Size(224, 26);
             this.tsmiExchanges.Text = "المصروفات";
             this.tsmiExchanges.Click += new System.EventHandler(this.tsmiExchanges_Click);
             // 
             // tsmiBills
             // 
             this.tsmiBills.Name = "tsmiBills";
-            this.tsmiBills.Size = new System.Drawing.Size(152, 22);
+            this.tsmiBills.Size = new System.Drawing.Size(224, 26);
             this.tsmiBills.Text = "الفواتير";
             this.tsmiBills.Click += new System.EventHandler(this.tsmiBills_Click);
             // 
             // tsmiItemsInReport
             // 
             this.tsmiItemsInReport.Name = "tsmiItemsInReport";
-            this.tsmiItemsInReport.Size = new System.Drawing.Size(152, 22);
+            this.tsmiItemsInReport.Size = new System.Drawing.Size(224, 26);
             this.tsmiItemsInReport.Text = "فواتير الشراء";
             this.tsmiItemsInReport.Click += new System.EventHandler(this.tsmiItemsInReport_Click);
             // 
+            // tsmiDesignNewReport
+            // 
+            this.tsmiDesignNewReport.Name = "tsmiDesignNewReport";
+            this.tsmiDesignNewReport.Size = new System.Drawing.Size(224, 26);
+            this.tsmiDesignNewReport.Text = "Design New Report";
+            this.tsmiDesignNewReport.Click += new System.EventHandler(this.tsmiDesignNewReport_Click);
+            // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(742, 516);
+            this.ClientSize = new System.Drawing.Size(989, 635);
             this.Controls.Add(this.pnlControls);
             this.MainMenuStrip = this.msMain;
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.Text = "برنامج مدير الأصناف - الشاشة الرئيسية";
@@ -423,5 +435,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiSuppliersTypes;
         private System.Windows.Forms.ToolStripMenuItem tsmiSuppliersAndCustomers;
         private System.Windows.Forms.ToolStripMenuItem tsmiItemsInReport;
+        private System.Windows.Forms.ToolStripMenuItem tsmiDesignNewReport;
     }
 }

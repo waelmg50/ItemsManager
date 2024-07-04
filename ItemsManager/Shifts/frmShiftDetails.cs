@@ -7,6 +7,8 @@ using System.Text;
 using System.Windows.Forms;
 using Utilities;
 using Managers;
+using DevExpress.XtraReports.UI;
+using ItemsManager.DevExpressReports;
 
 namespace ItemsManager.Shifts
 {
@@ -108,7 +110,12 @@ namespace ItemsManager.Shifts
         protected override void Print()
         {
             base.Print();
-
+            DevExpress.XtraReports.UI.XtraReport rptShiftReport = new DevExpress.XtraReports.UI.XtraReport();
+            string strReportPath = $@"{Application.StartupPath}\Report\ReportsFiles\Shifts.repx";
+            rptShiftReport.LoadLayout(strReportPath);
+            rptShiftReport.DataSource = SqlAdoWrapper.ExecuteQueryCommand("vwShiftsData_SelectByShiftID", new System.Data.SqlClient.SqlParameter[] { new System.Data.SqlClient.SqlParameter("@ShiftID", iRecordID) }, false);
+            frmDisplayReport frmDspRprt = new frmDisplayReport() { ReportDocumnet = rptShiftReport };
+            frmDspRprt.ShowDialog(this);
         }
 
         #endregion
