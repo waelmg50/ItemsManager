@@ -582,6 +582,21 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Report\Invoices.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Report\InvoiceTotal.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Report\InvoiceWithDetails.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Report\ItemsInTotal.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Report\ItemsInWithDetails.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Report\ReportsFiles\Shifts.repx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

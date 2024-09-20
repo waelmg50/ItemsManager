@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using Utilities;
 using Managers;
+using ItemsManager.DevExpressReports;
 
 namespace ItemsManager.Report
 {
@@ -126,16 +127,17 @@ namespace ItemsManager.Report
                         iCustomerTypeID = Convert.ToInt32(cbxCustomerType.SelectedValue);
                     if (Helper.CheckNumberInt(cbxCustomer.SelectedValue))
                         iCustomerID = Convert.ToInt32(cbxCustomer.SelectedValue);
-                    string strReportFileName = @"Report\InvoiceTotal.rpt";
+                    string strReportFileName = $@"{Application.StartupPath}\Report\InvoiceTotal.repx";
                     if (rdbtnDetails.Checked)
-                        strReportFileName = @"Report\InvoiceWithDetails.rpt";
-                    //ReportDocument rptInvoices = new ReportDocument();
-                    //rptInvoices.Load(strReportFileName);
-                    //rptInvoices.SetDataSource(mngrInvoiceHead.GetInvoicesReport(dtpDateFrom.Value, dtpDateTo.Value, iInvoiceIDFrom, iInvoiceIDTo,
-                    //    iCustomerTypeID, iCustomerID, rdbtnDetails.Checked));
-                    //frmPrintInfo frmPrint = new frmPrintInfo();
-                    //frmPrint.crvReport.ReportSource = rptInvoices;
-                    //frmPrint.ShowDialog(this);
+                        strReportFileName = $@"{Application.StartupPath}\Report\InvoiceWithDetails.repx";
+                    DevExpress.XtraReports.UI.XtraReport rptInvoices = new DevExpress.XtraReports.UI.XtraReport();
+                    rptInvoices.LoadLayout(strReportFileName);
+                    DataTable tblReportSource = mngrInvoiceHead.GetInvoicesReport(dtpDateFrom.Value, dtpDateTo.Value, iInvoiceIDFrom, iInvoiceIDTo, iCustomerTypeID, iCustomerID, rdbtnDetails.Checked);
+                    tblReportSource.TableName = "ReportSource";
+                    rptInvoices.DataSource = tblReportSource;
+                    rptInvoices.DataMember = tblReportSource.TableName;
+                    frmDisplayReport frmDspRprt = new frmDisplayReport() { ReportDocumnet = rptInvoices };
+                    frmDspRprt.ShowDialog(this);
                 }
             }
             catch (Exception ex)

@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using Utilities;
 using Managers;
+using ItemsManager.DevExpressReports;
 
 namespace ItemsManager.Report
 {
@@ -126,16 +127,17 @@ namespace ItemsManager.Report
                         iSupplierTypeID = Convert.ToInt32(cbxSupplierType.SelectedValue);
                     if (Helper.CheckNumberInt(cbxSupplier.SelectedValue))
                         iSupplierID = Convert.ToInt32(cbxSupplier.SelectedValue);
-                    string strReportFileName = @"Report\ItemsInTotal.rpt";
+                    string strReportFileName = @"Report\ItemsInTotal.repx";
                     if (rdbtnDetails.Checked)
-                        strReportFileName = @"Report\ItemsInWithDetails.rpt";
-                    //ReportDocument rptItemsIn = new ReportDocument();
-                    //rptItemsIn.Load(strReportFileName);
-                    //rptItemsIn.SetDataSource(mngrItemsInHead.GetItemsInReport(dtpDateFrom.Value, dtpDateTo.Value, iItemsInIDFrom, iItemsInIDTo,
-                    //    iSupplierTypeID, iSupplierID, rdbtnDetails.Checked));
-                    //frmPrintInfo frmPrint = new frmPrintInfo();
-                    //frmPrint.crvReport.ReportSource = rptItemsIn;
-                    //frmPrint.ShowDialog(this);
+                        strReportFileName = @"Report\ItemsInWithDetails.repx";
+                    DevExpress.XtraReports.UI.XtraReport rptInvoices = new DevExpress.XtraReports.UI.XtraReport();
+                    rptInvoices.LoadLayout(strReportFileName);
+                    DataTable tblReportSource = mngrItemsInHead.GetItemsInReport(dtpDateFrom.Value, dtpDateTo.Value, iItemsInIDFrom, iItemsInIDTo, iSupplierTypeID, iSupplierID, rdbtnDetails.Checked);
+                    tblReportSource.TableName = "ReportSource";
+                    rptInvoices.DataSource = tblReportSource;
+                    rptInvoices.DataMember = tblReportSource.TableName;
+                    frmDisplayReport frmDspRprt = new frmDisplayReport() { ReportDocumnet = rptInvoices };
+                    frmDspRprt.ShowDialog(this);
                 }
             }
             catch (Exception ex)

@@ -31,7 +31,7 @@ namespace ItemsManager.Report
         {
             try
             {
-                dataGridView1.DataSource = mngrExpenses.GetView_Expenses1();
+                dataGridView1.DataSource = mngrExpenses.GetView_Expenses1(UserLogin.CurrentShiftID);
                 cmbtype.DataSource = mngrExpensesTypes.GetExpensesTypes();
                 cmbtype.DisplayMember = "Name";
                 cmbtype.ValueMember = "ID";
@@ -48,8 +48,7 @@ namespace ItemsManager.Report
             {
                 if (Helper.CheckNumberInt(cmbtype.SelectedValue))
                 {
-                    dataGridView1.DataSource = mngrExpenses.GetView_Expenses(Convert.ToInt32(cmbtype.SelectedValue));
-                    mngrExpenses.GetView_Expenses(Convert.ToInt32(cmbtype.SelectedValue));
+                    dataGridView1.DataSource = mngrExpenses.GetView_Expenses(Convert.ToInt32(cmbtype.SelectedValue), UserLogin.CurrentShiftID);
                 }
             }
             catch (Exception ex)

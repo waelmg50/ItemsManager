@@ -152,8 +152,8 @@ namespace ItemsManager
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmLogin";
-            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLogin_FormClosing);
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errprvForm)).EndInit();
             this.pnlControls.ResumeLayout(false);
             this.pnlControls.PerformLayout();

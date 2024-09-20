@@ -20,24 +20,24 @@ namespace ItemsManager
         {
             try
             {
-                UserLogin.CurrentShiftID = Managers.mngrShifts.GetCurrentShiftID();
-                if (UserLogin.CurrentShiftID > 0)
-                {
-                    frmLogin frmLgn = new frmLogin();
-                    frmLgn.LoginStatus = 0;
-                    frmLgn.ShowDialog(this);
-                }
-                else if (UserLogin.CurrentShiftID == 0)
-                {
-                    Shifts.frmShiftIn frmShftN = new Shifts.frmShiftIn();
-                    frmShftN.ShowDialog(this);
-                }
+                //UserLogin.CurrentShiftID = Managers.mngrShifts.GetCurrentShiftID();
+                //if (UserLogin.CurrentShiftID > 0)
+                //{
+                //    frmLogin frmLgn = new frmLogin();
+                //    frmLgn.LoginStatus = 0;
+                //    frmLgn.ShowDialog(this);
+                //}
+                //else if (UserLogin.CurrentShiftID == 0)
+                //{
+                //    Shifts.frmShiftIn frmShftN = new Shifts.frmShiftIn();
+                //    frmShftN.ShowDialog(this);
+                //}
 
-                if (UserLogin.CurrentShiftID <= 0 || UserLogin.LoggedUserID <= 0)
-                {
-                    Application.Exit();
-                    return;
-                }
+                //if (UserLogin.CurrentShiftID <= 0 || UserLogin.LoggedUserID <= 0)
+                //{
+                //    Application.Exit();
+                //    return;
+                //}
                 InitializeComponent();
             }
             catch (Exception ex)

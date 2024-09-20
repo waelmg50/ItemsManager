@@ -9,6 +9,7 @@ using System.Data.SqlClient;
 using Utilities;
 using Entities;
 using Managers;
+using ItemsManager.DevExpressReports;
 
 namespace ItemsManager.Invoice
 {
@@ -246,6 +247,16 @@ namespace ItemsManager.Invoice
             }
             return false;
         }
+        protected override void Print()
+        {
+            base.Print();
+            DevExpress.XtraReports.UI.XtraReport rptShiftReport = new DevExpress.XtraReports.UI.XtraReport();
+            string strReportPath = $@"{Application.StartupPath}\Report\Invoices.repx";
+            rptShiftReport.LoadLayout(strReportPath);
+            rptShiftReport.DataSource = SqlAdoWrapper.ExecuteQueryCommand("Invoice_SelectReportByID", new System.Data.SqlClient.SqlParameter[] { new System.Data.SqlClient.SqlParameter("@InvoiceID", iRecordID) }, false);
+            frmDisplayReport frmDspRprt = new frmDisplayReport() { ReportDocumnet = rptShiftReport };
+            frmDspRprt.ShowDialog(this);
+        }
 
         #endregion
 
@@ -431,13 +442,13 @@ namespace ItemsManager.Invoice
                             txtBarCode.Focus();
                             return;
                         }
-                        //Check if the item have existing quantity.
-                        if (!RecordsFunctions.IsDataExists("ItemsInDetails", "ItemID", iItemID.ToString(), 0, "CurrentQuantity > 0"))
-                        {
-                            Helper.ShowMessage(Resources.ProgramMessages.MesNoExistingItemQuantity);
-                            btnClean_Click(null, null);
-                            return;
-                        }
+                        ////Check if the item have existing quantity.
+                        //if (!RecordsFunctions.IsDataExists("ItemsInDetails", "ItemID", iItemID.ToString(), 0, "CurrentQuantity > 0"))
+                        //{
+                        //    Helper.ShowMessage(Resources.ProgramMessages.MesNoExistingItemQuantity);
+                        //    btnClean_Click(null, null);
+                        //    return;
+                        //}
                         tvcmbCategory.SelectedValue = RecordsFunctions.GetNameUsingID("Items", "CategoryID", iItemID);
                         bool bItemNotChanged = Helper.CheckNumberInt(cmbItemID.SelectedValue) && Convert.ToInt32(cmbItemID.SelectedValue) == iItemID;
                         cmbItemID.SelectedValue = iItemID;

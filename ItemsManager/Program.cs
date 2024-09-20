@@ -29,7 +29,13 @@ namespace ItemsManager
                 {
                     Application.EnableVisualStyles();
                     Application.SetCompatibleTextRenderingDefault(false);
-                    Application.Run(new frmMain());
+                    UserLogin.CurrentShiftID = Managers.mngrShifts.GetCurrentShiftID();
+                    if (UserLogin.CurrentShiftID > 0)
+                        Application.Run(new frmLogin() { LoginStatus = 0 });
+                    else if (UserLogin.CurrentShiftID == 0)
+                        Application.Run(new Shifts.frmShiftIn());
+                    if (UserLogin.CurrentShiftID > 0 && UserLogin.LoggedUserID > 0)
+                        Application.Run(new frmMain());
                 }
                 else
                     Application.Run(new frmRestore());
