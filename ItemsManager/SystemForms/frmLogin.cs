@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.ComponentModel;
 using System.Drawing;
@@ -81,7 +81,6 @@ namespace ItemsManager
 		/// </summary>
 		private void InitializeComponent()
 		{
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.pnlControls = new System.Windows.Forms.Panel();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
@@ -102,56 +101,85 @@ namespace ItemsManager
             this.pnlControls.Controls.Add(this.btnLogin);
             this.pnlControls.Controls.Add(this.txtPassword);
             this.pnlControls.Controls.Add(this.lblUserName);
-            resources.ApplyResources(this.pnlControls, "pnlControls");
+            this.pnlControls.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlControls.Location = new System.Drawing.Point(0, 0);
             this.pnlControls.Name = "pnlControls";
+            this.pnlControls.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.pnlControls.Size = new System.Drawing.Size(355, 151);
+            this.pnlControls.TabIndex = 6;
             // 
             // txtUserName
             // 
-            resources.ApplyResources(this.txtUserName, "txtUserName");
+            this.txtUserName.Location = new System.Drawing.Point(81, 20);
             this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(100, 22);
+            this.txtUserName.TabIndex = 1;
             this.txtUserName.Tag = "1";
             // 
             // lblPassword
             // 
-            resources.ApplyResources(this.lblPassword, "lblPassword");
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblPassword.Location = new System.Drawing.Point(206, 58);
             this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(68, 16);
+            this.lblPassword.TabIndex = 1;
+            this.lblPassword.Text = "كلمة المرور :";
             // 
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            resources.ApplyResources(this.btnCancel, "btnCancel");
+            this.btnCancel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnCancel.Location = new System.Drawing.Point(81, 100);
             this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 30);
+            this.btnCancel.TabIndex = 4;
+            this.btnCancel.Text = "إلغاء";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnLogin
             // 
-            resources.ApplyResources(this.btnLogin, "btnLogin");
+            this.btnLogin.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnLogin.Location = new System.Drawing.Point(188, 100);
             this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(86, 30);
+            this.btnLogin.TabIndex = 3;
+            this.btnLogin.Text = "تسجيل الدخول";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtPassword
             // 
-            resources.ApplyResources(this.txtPassword, "txtPassword");
+            this.txtPassword.Location = new System.Drawing.Point(81, 55);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(100, 22);
+            this.txtPassword.TabIndex = 2;
             this.txtPassword.Tag = "1";
             this.txtPassword.UseSystemPasswordChar = true;
             // 
             // lblUserName
             // 
-            resources.ApplyResources(this.lblUserName, "lblUserName");
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblUserName.Location = new System.Drawing.Point(198, 23);
             this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(76, 16);
+            this.lblUserName.TabIndex = 5;
+            this.lblUserName.Text = "اسم المستخدم :";
             // 
             // frmLogin
             // 
             this.AcceptButton = this.btnLogin;
-            resources.ApplyResources(this, "$this");
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.CancelButton = this.btnCancel;
+            this.ClientSize = new System.Drawing.Size(355, 151);
             this.Controls.Add(this.pnlControls);
             this.Font = this.Font;
             this.Icon = this.Icon;
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmLogin";
+            this.Text = "مدير الأصناف - تسجيل الدخول";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLogin_FormClosing);
             this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errprvForm)).EndInit();
