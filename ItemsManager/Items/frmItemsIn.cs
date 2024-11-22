@@ -499,6 +499,25 @@ namespace ItemsManager.Items
                 ErrorHandler.LogError(ex);
             }
         }
+        private void pnlSearchItems_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmSearchItems frmSrchItms = new frmSearchItems();
+                frmSrchItms.ShowDialog(this);
+                if (frmSrchItms.ItemID > 0 && frmSrchItms.CategoryID > 0)
+                {
+                    tvcmbCategory.SelectedValue = frmSrchItms.CategoryID;
+                    tvcmbCategory_AfterSelect(null, null);
+                    cmbItemID.SelectedValue = frmSrchItms.ItemID;
+                    cmbItemID_SelectedIndexChanged(null, null);
+                }
+            }
+            catch (Exception ex)
+            {
+                ErrorHandler.LogError(ex);
+            }
+        }
 
         #endregion
 

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmItemsUnits));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tvcmbCategory = new CustomControls.ucTreeViewComboBox();
             this.lblCategory = new System.Windows.Forms.Label();
             this.cmbItemID = new System.Windows.Forms.ComboBox();
@@ -40,14 +40,14 @@
             this.lblUnitPrice = new System.Windows.Forms.Label();
             this.chkIsDefault = new System.Windows.Forms.CheckBox();
             this.dgvItemUnits = new System.Windows.Forms.DataGridView();
-            this.cmbTypeID = new System.Windows.Forms.ComboBox();
-            this.lblTypeID = new System.Windows.Forms.Label();
-            this.lblPound = new System.Windows.Forms.Label();
             this.dgtxtcID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgtxtcUnitID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgtxtcUnitName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgtxtcQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgbcIsDefault = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.cmbTypeID = new System.Windows.Forms.ComboBox();
+            this.lblTypeID = new System.Windows.Forms.Label();
+            this.lblPound = new System.Windows.Forms.Label();
             this.pnlControls.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errprvForm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItemUnits)).BeginInit();
@@ -55,7 +55,8 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(233, 12);
+            this.txtID.Location = new System.Drawing.Point(311, 15);
+            this.txtID.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             // 
             // pnlControls
             // 
@@ -71,7 +72,9 @@
             this.pnlControls.Controls.Add(this.cmbUnitID);
             this.pnlControls.Controls.Add(this.lblUnitID);
             this.pnlControls.Controls.Add(this.lblCategory);
-            this.pnlControls.Size = new System.Drawing.Size(365, 201);
+            this.pnlControls.Location = new System.Drawing.Point(0, 31);
+            this.pnlControls.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pnlControls.Size = new System.Drawing.Size(487, 247);
             this.pnlControls.Controls.SetChildIndex(this.txtID, 0);
             this.pnlControls.Controls.SetChildIndex(this.lblID, 0);
             this.pnlControls.Controls.SetChildIndex(this.lblCategory, 0);
@@ -89,18 +92,20 @@
             // 
             // lblID
             // 
-            this.lblID.Location = new System.Drawing.Point(293, 12);
+            this.lblID.Location = new System.Drawing.Point(391, 15);
+            this.lblID.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             // 
             // tvcmbCategory
             // 
             this.tvcmbCategory.Direction = CustomControls.ucTreeViewComboBox.Directions.rtl;
-            this.tvcmbCategory.Location = new System.Drawing.Point(8, 38);
+            this.tvcmbCategory.Location = new System.Drawing.Point(11, 47);
+            this.tvcmbCategory.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.tvcmbCategory.Name = "tvcmbCategory";
             this.tvcmbCategory.RecursiveTable = true;
             this.tvcmbCategory.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tvcmbCategory.SelectedValue = ((object)(resources.GetObject("tvcmbCategory.SelectedValue")));
             this.tvcmbCategory.SelectionLevel = -1;
-            this.tvcmbCategory.Size = new System.Drawing.Size(279, 21);
+            this.tvcmbCategory.Size = new System.Drawing.Size(372, 26);
             this.tvcmbCategory.TabIndex = 13;
             this.tvcmbCategory.Tag = "1";
             this.tvcmbCategory.AfterSelect += new CustomControls.ucTreeViewComboBox.AfterSelectHandler(this.tvcmbCategory_AfterSelect);
@@ -108,18 +113,20 @@
             // lblCategory
             // 
             this.lblCategory.AutoSize = true;
-            this.lblCategory.Location = new System.Drawing.Point(305, 38);
+            this.lblCategory.Location = new System.Drawing.Point(407, 47);
+            this.lblCategory.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(51, 13);
+            this.lblCategory.Size = new System.Drawing.Size(51, 16);
             this.lblCategory.TabIndex = 12;
             this.lblCategory.Text = "التصنيف :";
             // 
             // cmbItemID
             // 
             this.cmbItemID.FormattingEnabled = true;
-            this.cmbItemID.Location = new System.Drawing.Point(8, 65);
+            this.cmbItemID.Location = new System.Drawing.Point(11, 80);
+            this.cmbItemID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbItemID.Name = "cmbItemID";
-            this.cmbItemID.Size = new System.Drawing.Size(279, 21);
+            this.cmbItemID.Size = new System.Drawing.Size(371, 24);
             this.cmbItemID.TabIndex = 17;
             this.cmbItemID.Tag = "1";
             this.cmbItemID.SelectedIndexChanged += new System.EventHandler(this.cmbItemID_SelectedIndexChanged);
@@ -127,55 +134,61 @@
             // lblItemID
             // 
             this.lblItemID.AutoSize = true;
-            this.lblItemID.Location = new System.Drawing.Point(313, 65);
+            this.lblItemID.Location = new System.Drawing.Point(417, 80);
+            this.lblItemID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblItemID.Name = "lblItemID";
-            this.lblItemID.Size = new System.Drawing.Size(43, 13);
+            this.lblItemID.Size = new System.Drawing.Size(43, 16);
             this.lblItemID.TabIndex = 16;
             this.lblItemID.Text = "الصنف :";
             // 
             // cmbUnitID
             // 
             this.cmbUnitID.FormattingEnabled = true;
-            this.cmbUnitID.Location = new System.Drawing.Point(8, 119);
+            this.cmbUnitID.Location = new System.Drawing.Point(11, 146);
+            this.cmbUnitID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbUnitID.Name = "cmbUnitID";
-            this.cmbUnitID.Size = new System.Drawing.Size(279, 21);
+            this.cmbUnitID.Size = new System.Drawing.Size(371, 24);
             this.cmbUnitID.TabIndex = 15;
             this.cmbUnitID.Tag = "1";
             // 
             // lblUnitID
             // 
             this.lblUnitID.AutoSize = true;
-            this.lblUnitID.Location = new System.Drawing.Point(313, 119);
+            this.lblUnitID.Location = new System.Drawing.Point(417, 146);
+            this.lblUnitID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUnitID.Name = "lblUnitID";
-            this.lblUnitID.Size = new System.Drawing.Size(43, 13);
+            this.lblUnitID.Size = new System.Drawing.Size(44, 16);
             this.lblUnitID.TabIndex = 14;
             this.lblUnitID.Text = "الوحدة :";
             // 
             // txtnUnitPrice
             // 
             this.txtnUnitPrice.IsInt = false;
-            this.txtnUnitPrice.Location = new System.Drawing.Point(233, 146);
+            this.txtnUnitPrice.Location = new System.Drawing.Point(311, 180);
+            this.txtnUnitPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtnUnitPrice.MaxLength = 7;
             this.txtnUnitPrice.Name = "txtnUnitPrice";
-            this.txtnUnitPrice.Size = new System.Drawing.Size(54, 20);
+            this.txtnUnitPrice.Size = new System.Drawing.Size(71, 22);
             this.txtnUnitPrice.TabIndex = 19;
             this.txtnUnitPrice.Tag = "1";
             // 
             // lblUnitPrice
             // 
             this.lblUnitPrice.AutoSize = true;
-            this.lblUnitPrice.Location = new System.Drawing.Point(313, 146);
+            this.lblUnitPrice.Location = new System.Drawing.Point(417, 180);
+            this.lblUnitPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUnitPrice.Name = "lblUnitPrice";
-            this.lblUnitPrice.Size = new System.Drawing.Size(43, 13);
+            this.lblUnitPrice.Size = new System.Drawing.Size(40, 16);
             this.lblUnitPrice.TabIndex = 18;
             this.lblUnitPrice.Text = "السعر :";
             // 
             // chkIsDefault
             // 
             this.chkIsDefault.AutoSize = true;
-            this.chkIsDefault.Location = new System.Drawing.Point(255, 172);
+            this.chkIsDefault.Location = new System.Drawing.Point(340, 212);
+            this.chkIsDefault.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkIsDefault.Name = "chkIsDefault";
-            this.chkIsDefault.Size = new System.Drawing.Size(98, 17);
+            this.chkIsDefault.Size = new System.Drawing.Size(101, 20);
             this.chkIsDefault.TabIndex = 20;
             this.chkIsDefault.Text = "الوحدة الرئيسية";
             this.chkIsDefault.UseVisualStyleBackColor = true;
@@ -192,18 +205,71 @@
             this.dgtxtcQuantity,
             this.dgbcIsDefault});
             this.dgvItemUnits.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvItemUnits.Location = new System.Drawing.Point(0, 226);
+            this.dgvItemUnits.Location = new System.Drawing.Point(0, 278);
+            this.dgvItemUnits.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvItemUnits.Name = "dgvItemUnits";
-            this.dgvItemUnits.Size = new System.Drawing.Size(365, 168);
+            this.dgvItemUnits.RowHeadersWidth = 51;
+            this.dgvItemUnits.Size = new System.Drawing.Size(487, 207);
             this.dgvItemUnits.TabIndex = 22;
             this.dgvItemUnits.DoubleClick += new System.EventHandler(this.dgvItemUnits_DoubleClick);
+            // 
+            // dgtxtcID
+            // 
+            this.dgtxtcID.DataPropertyName = "ID";
+            this.dgtxtcID.HeaderText = "ID";
+            this.dgtxtcID.MinimumWidth = 6;
+            this.dgtxtcID.Name = "dgtxtcID";
+            this.dgtxtcID.Visible = false;
+            this.dgtxtcID.Width = 125;
+            // 
+            // dgtxtcUnitID
+            // 
+            this.dgtxtcUnitID.DataPropertyName = "UnitID";
+            this.dgtxtcUnitID.HeaderText = "UnitID";
+            this.dgtxtcUnitID.MinimumWidth = 6;
+            this.dgtxtcUnitID.Name = "dgtxtcUnitID";
+            this.dgtxtcUnitID.Visible = false;
+            this.dgtxtcUnitID.Width = 125;
+            // 
+            // dgtxtcUnitName
+            // 
+            this.dgtxtcUnitName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgtxtcUnitName.DataPropertyName = "Name";
+            this.dgtxtcUnitName.HeaderText = "الوحدة";
+            this.dgtxtcUnitName.MinimumWidth = 6;
+            this.dgtxtcUnitName.Name = "dgtxtcUnitName";
+            this.dgtxtcUnitName.ReadOnly = true;
+            this.dgtxtcUnitName.Width = 67;
+            // 
+            // dgtxtcQuantity
+            // 
+            this.dgtxtcQuantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgtxtcQuantity.DataPropertyName = "UnitPrice";
+            dataGridViewCellStyle4.Format = "N2";
+            this.dgtxtcQuantity.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgtxtcQuantity.HeaderText = "السعر";
+            this.dgtxtcQuantity.MinimumWidth = 6;
+            this.dgtxtcQuantity.Name = "dgtxtcQuantity";
+            this.dgtxtcQuantity.ReadOnly = true;
+            this.dgtxtcQuantity.Width = 63;
+            // 
+            // dgbcIsDefault
+            // 
+            this.dgbcIsDefault.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgbcIsDefault.DataPropertyName = "IsDefault";
+            this.dgbcIsDefault.HeaderText = "رئيسية";
+            this.dgbcIsDefault.MinimumWidth = 6;
+            this.dgbcIsDefault.Name = "dgbcIsDefault";
+            this.dgbcIsDefault.ReadOnly = true;
+            this.dgbcIsDefault.Width = 45;
             // 
             // cmbTypeID
             // 
             this.cmbTypeID.FormattingEnabled = true;
-            this.cmbTypeID.Location = new System.Drawing.Point(8, 92);
+            this.cmbTypeID.Location = new System.Drawing.Point(11, 113);
+            this.cmbTypeID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbTypeID.Name = "cmbTypeID";
-            this.cmbTypeID.Size = new System.Drawing.Size(279, 21);
+            this.cmbTypeID.Size = new System.Drawing.Size(371, 24);
             this.cmbTypeID.TabIndex = 22;
             this.cmbTypeID.Tag = "1";
             this.cmbTypeID.SelectedIndexChanged += new System.EventHandler(this.cmbTypeID_SelectedIndexChanged);
@@ -211,69 +277,29 @@
             // lblTypeID
             // 
             this.lblTypeID.AutoSize = true;
-            this.lblTypeID.Location = new System.Drawing.Point(295, 92);
+            this.lblTypeID.Location = new System.Drawing.Point(393, 113);
+            this.lblTypeID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTypeID.Name = "lblTypeID";
-            this.lblTypeID.Size = new System.Drawing.Size(61, 13);
+            this.lblTypeID.Size = new System.Drawing.Size(65, 16);
             this.lblTypeID.TabIndex = 21;
             this.lblTypeID.Text = "نوع الوحدة :";
             // 
             // lblPound
             // 
             this.lblPound.AutoSize = true;
-            this.lblPound.Location = new System.Drawing.Point(199, 146);
+            this.lblPound.Location = new System.Drawing.Point(265, 180);
+            this.lblPound.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPound.Name = "lblPound";
-            this.lblPound.Size = new System.Drawing.Size(28, 13);
+            this.lblPound.Size = new System.Drawing.Size(28, 16);
             this.lblPound.TabIndex = 23;
             this.lblPound.Text = "جنيه";
             // 
-            // dgtxtcID
-            // 
-            this.dgtxtcID.DataPropertyName = "ID";
-            this.dgtxtcID.HeaderText = "ID";
-            this.dgtxtcID.Name = "dgtxtcID";
-            this.dgtxtcID.Visible = false;
-            // 
-            // dgtxtcUnitID
-            // 
-            this.dgtxtcUnitID.DataPropertyName = "UnitID";
-            this.dgtxtcUnitID.HeaderText = "UnitID";
-            this.dgtxtcUnitID.Name = "dgtxtcUnitID";
-            this.dgtxtcUnitID.Visible = false;
-            // 
-            // dgtxtcUnitName
-            // 
-            this.dgtxtcUnitName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgtxtcUnitName.DataPropertyName = "Name";
-            this.dgtxtcUnitName.HeaderText = "الوحدة";
-            this.dgtxtcUnitName.Name = "dgtxtcUnitName";
-            this.dgtxtcUnitName.ReadOnly = true;
-            this.dgtxtcUnitName.Width = 61;
-            // 
-            // dgtxtcQuantity
-            // 
-            this.dgtxtcQuantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgtxtcQuantity.DataPropertyName = "UnitPrice";
-            dataGridViewCellStyle1.Format = "N2";
-            this.dgtxtcQuantity.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgtxtcQuantity.HeaderText = "السعر";
-            this.dgtxtcQuantity.Name = "dgtxtcQuantity";
-            this.dgtxtcQuantity.ReadOnly = true;
-            this.dgtxtcQuantity.Width = 61;
-            // 
-            // dgbcIsDefault
-            // 
-            this.dgbcIsDefault.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgbcIsDefault.DataPropertyName = "IsDefault";
-            this.dgbcIsDefault.HeaderText = "رئيسية";
-            this.dgbcIsDefault.Name = "dgbcIsDefault";
-            this.dgbcIsDefault.ReadOnly = true;
-            this.dgbcIsDefault.Width = 46;
-            // 
             // frmItemsUnits
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(365, 394);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.ClientSize = new System.Drawing.Size(487, 485);
             this.Controls.Add(this.dgvItemUnits);
+            this.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.Name = "frmItemsUnits";
             this.Text = "مدير الأصناف - وحدات الأصناف";
             this.Load += new System.EventHandler(this.frmItemsUnits_Load);

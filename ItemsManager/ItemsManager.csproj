@@ -294,6 +294,12 @@
     <Compile Include="Items\frmItemsUnitsConversions.Designer.cs">
       <DependentUpon>frmItemsUnitsConversions.cs</DependentUpon>
     </Compile>
+    <Compile Include="Items\frmSearchItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Items\frmSearchItems.Designer.cs">
+      <DependentUpon>frmSearchItems.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BaseForms\frmActionBase.resx">
@@ -358,6 +364,9 @@
     <EmbeddedResource Include="Items\frmItemsUnitsConversions.resx">
       <DependentUpon>frmItemsUnitsConversions.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Items\frmSearchItems.resx">
+      <DependentUpon>frmSearchItems.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

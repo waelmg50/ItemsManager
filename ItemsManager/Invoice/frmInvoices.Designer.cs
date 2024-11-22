@@ -65,6 +65,7 @@
             this.lblTotalValue = new System.Windows.Forms.Label();
             this.lblCustomer = new System.Windows.Forms.Label();
             this.cbxCustomer = new System.Windows.Forms.ComboBox();
+            this.pnlSearchItems = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.tblDetails)).BeginInit();
             this.pnlControls.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errprvForm)).BeginInit();
@@ -75,7 +76,8 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(472, 9);
+            this.txtID.Location = new System.Drawing.Point(629, 11);
+            this.txtID.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             // 
             // pnlControls
             // 
@@ -84,7 +86,8 @@
             this.pnlControls.Controls.Add(this.pnlItemsInControls);
             this.pnlControls.Controls.Add(this.dgvInvoice);
             this.pnlControls.Controls.Add(this.pnlFooter);
-            this.pnlControls.Size = new System.Drawing.Size(598, 491);
+            this.pnlControls.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.pnlControls.Size = new System.Drawing.Size(797, 608);
             this.pnlControls.Controls.SetChildIndex(this.pnlFooter, 0);
             this.pnlControls.Controls.SetChildIndex(this.dgvInvoice, 0);
             this.pnlControls.Controls.SetChildIndex(this.txtID, 0);
@@ -95,10 +98,12 @@
             // 
             // lblID
             // 
-            this.lblID.Location = new System.Drawing.Point(532, 9);
+            this.lblID.Location = new System.Drawing.Point(709, 11);
+            this.lblID.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             // 
             // pnlItemsInControls
             // 
+            this.pnlItemsInControls.Controls.Add(this.pnlSearchItems);
             this.pnlItemsInControls.Controls.Add(this.lblPound);
             this.pnlItemsInControls.Controls.Add(this.btnClean);
             this.pnlItemsInControls.Controls.Add(this.btnAdd);
@@ -116,25 +121,28 @@
             this.pnlItemsInControls.Controls.Add(this.lblItemCategory);
             this.pnlItemsInControls.Controls.Add(this.lblBarCode);
             this.pnlItemsInControls.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlItemsInControls.Location = new System.Drawing.Point(0, 37);
+            this.pnlItemsInControls.Location = new System.Drawing.Point(0, 49);
+            this.pnlItemsInControls.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlItemsInControls.Name = "pnlItemsInControls";
-            this.pnlItemsInControls.Size = new System.Drawing.Size(598, 102);
+            this.pnlItemsInControls.Size = new System.Drawing.Size(797, 126);
             this.pnlItemsInControls.TabIndex = 4;
             // 
             // lblPound
             // 
             this.lblPound.AutoSize = true;
-            this.lblPound.Location = new System.Drawing.Point(12, 42);
+            this.lblPound.Location = new System.Drawing.Point(31, 47);
+            this.lblPound.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPound.Name = "lblPound";
-            this.lblPound.Size = new System.Drawing.Size(28, 13);
+            this.lblPound.Size = new System.Drawing.Size(28, 16);
             this.lblPound.TabIndex = 36;
             this.lblPound.Text = "جنيه";
             // 
             // btnClean
             // 
-            this.btnClean.Location = new System.Drawing.Point(9, 73);
+            this.btnClean.Location = new System.Drawing.Point(12, 90);
+            this.btnClean.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClean.Name = "btnClean";
-            this.btnClean.Size = new System.Drawing.Size(75, 23);
+            this.btnClean.Size = new System.Drawing.Size(100, 28);
             this.btnClean.TabIndex = 35;
             this.btnClean.Text = "تنظيف";
             this.btnClean.UseVisualStyleBackColor = true;
@@ -142,9 +150,10 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(92, 73);
+            this.btnAdd.Location = new System.Drawing.Point(123, 90);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.Size = new System.Drawing.Size(100, 28);
             this.btnAdd.TabIndex = 35;
             this.btnAdd.Text = "إضافة";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -154,11 +163,12 @@
             // 
             this.txtnUnitPrice.BackColor = System.Drawing.Color.White;
             this.txtnUnitPrice.IsInt = false;
-            this.txtnUnitPrice.Location = new System.Drawing.Point(43, 39);
+            this.txtnUnitPrice.Location = new System.Drawing.Point(67, 44);
+            this.txtnUnitPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtnUnitPrice.MaxLength = 7;
             this.txtnUnitPrice.Name = "txtnUnitPrice";
             this.txtnUnitPrice.ReadOnly = true;
-            this.txtnUnitPrice.Size = new System.Drawing.Size(99, 20);
+            this.txtnUnitPrice.Size = new System.Drawing.Size(131, 22);
             this.txtnUnitPrice.TabIndex = 34;
             this.txtnUnitPrice.Tag = "";
             // 
@@ -167,20 +177,22 @@
             this.txtnTotalPrice.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.txtnTotalPrice.ForeColor = System.Drawing.Color.Navy;
             this.txtnTotalPrice.IsInt = false;
-            this.txtnTotalPrice.Location = new System.Drawing.Point(359, 64);
+            this.txtnTotalPrice.Location = new System.Drawing.Point(479, 79);
+            this.txtnTotalPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtnTotalPrice.MaxLength = 7;
             this.txtnTotalPrice.Name = "txtnTotalPrice";
-            this.txtnTotalPrice.Size = new System.Drawing.Size(127, 26);
+            this.txtnTotalPrice.Size = new System.Drawing.Size(168, 30);
             this.txtnTotalPrice.TabIndex = 34;
             this.txtnTotalPrice.Tag = "";
             // 
             // txtnQuantity
             // 
             this.txtnQuantity.IsInt = false;
-            this.txtnQuantity.Location = new System.Drawing.Point(443, 36);
+            this.txtnQuantity.Location = new System.Drawing.Point(591, 44);
+            this.txtnQuantity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtnQuantity.MaxLength = 7;
             this.txtnQuantity.Name = "txtnQuantity";
-            this.txtnQuantity.Size = new System.Drawing.Size(100, 20);
+            this.txtnQuantity.Size = new System.Drawing.Size(132, 22);
             this.txtnQuantity.TabIndex = 34;
             this.txtnQuantity.Tag = "";
             this.txtnQuantity.TextChanged += new System.EventHandler(this.txtnQuantity_TextChanged);
@@ -190,9 +202,10 @@
             // lblUnitPrice
             // 
             this.lblUnitPrice.AutoSize = true;
-            this.lblUnitPrice.Location = new System.Drawing.Point(148, 39);
+            this.lblUnitPrice.Location = new System.Drawing.Point(206, 47);
+            this.lblUnitPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUnitPrice.Name = "lblUnitPrice";
-            this.lblUnitPrice.Size = new System.Drawing.Size(68, 13);
+            this.lblUnitPrice.Size = new System.Drawing.Size(68, 16);
             this.lblUnitPrice.TabIndex = 33;
             this.lblUnitPrice.Text = "سعر الوحدة :";
             // 
@@ -201,27 +214,30 @@
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lblTotal.ForeColor = System.Drawing.Color.Red;
-            this.lblTotal.Location = new System.Drawing.Point(498, 64);
+            this.lblTotal.Location = new System.Drawing.Point(664, 79);
+            this.lblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(94, 19);
+            this.lblTotal.Size = new System.Drawing.Size(115, 23);
             this.lblTotal.TabIndex = 33;
             this.lblTotal.Text = "إجمالي الصنف :";
             // 
             // lblQuantity
             // 
             this.lblQuantity.AutoSize = true;
-            this.lblQuantity.Location = new System.Drawing.Point(549, 36);
+            this.lblQuantity.Location = new System.Drawing.Point(732, 44);
+            this.lblQuantity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(43, 13);
+            this.lblQuantity.Size = new System.Drawing.Size(42, 16);
             this.lblQuantity.TabIndex = 33;
             this.lblQuantity.Text = "الكمية :";
             // 
             // cmbUnitID
             // 
             this.cmbUnitID.FormattingEnabled = true;
-            this.cmbUnitID.Location = new System.Drawing.Point(220, 36);
+            this.cmbUnitID.Location = new System.Drawing.Point(293, 44);
+            this.cmbUnitID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbUnitID.Name = "cmbUnitID";
-            this.cmbUnitID.Size = new System.Drawing.Size(158, 21);
+            this.cmbUnitID.Size = new System.Drawing.Size(209, 24);
             this.cmbUnitID.TabIndex = 32;
             this.cmbUnitID.Tag = "";
             this.cmbUnitID.SelectedIndexChanged += new System.EventHandler(this.cmbUnitID_SelectedIndexChanged);
@@ -229,18 +245,20 @@
             // lblUnitID
             // 
             this.lblUnitID.AutoSize = true;
-            this.lblUnitID.Location = new System.Drawing.Point(394, 36);
+            this.lblUnitID.Location = new System.Drawing.Point(525, 44);
+            this.lblUnitID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUnitID.Name = "lblUnitID";
-            this.lblUnitID.Size = new System.Drawing.Size(43, 13);
+            this.lblUnitID.Size = new System.Drawing.Size(44, 16);
             this.lblUnitID.TabIndex = 31;
             this.lblUnitID.Text = "الوحدة :";
             // 
             // cmbItemID
             // 
             this.cmbItemID.FormattingEnabled = true;
-            this.cmbItemID.Location = new System.Drawing.Point(12, 9);
+            this.cmbItemID.Location = new System.Drawing.Point(51, 9);
+            this.cmbItemID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbItemID.Name = "cmbItemID";
-            this.cmbItemID.Size = new System.Drawing.Size(130, 21);
+            this.cmbItemID.Size = new System.Drawing.Size(172, 24);
             this.cmbItemID.TabIndex = 30;
             this.cmbItemID.Tag = "";
             this.cmbItemID.SelectedIndexChanged += new System.EventHandler(this.cmbItemID_SelectedIndexChanged);
@@ -248,18 +266,20 @@
             // lblItemID
             // 
             this.lblItemID.AutoSize = true;
-            this.lblItemID.Location = new System.Drawing.Point(173, 9);
+            this.lblItemID.Location = new System.Drawing.Point(231, 11);
+            this.lblItemID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblItemID.Name = "lblItemID";
-            this.lblItemID.Size = new System.Drawing.Size(43, 13);
+            this.lblItemID.Size = new System.Drawing.Size(43, 16);
             this.lblItemID.TabIndex = 29;
             this.lblItemID.Text = "الصنف :";
             // 
             // txtBarCode
             // 
-            this.txtBarCode.Location = new System.Drawing.Point(443, 9);
+            this.txtBarCode.Location = new System.Drawing.Point(591, 11);
+            this.txtBarCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBarCode.MaxLength = 50;
             this.txtBarCode.Name = "txtBarCode";
-            this.txtBarCode.Size = new System.Drawing.Size(100, 20);
+            this.txtBarCode.Size = new System.Drawing.Size(132, 22);
             this.txtBarCode.TabIndex = 1;
             this.txtBarCode.Tag = "";
             this.txtBarCode.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txtBarCode_PreviewKeyDown);
@@ -267,18 +287,20 @@
             // lblItemCategory
             // 
             this.lblItemCategory.AutoSize = true;
-            this.lblItemCategory.Location = new System.Drawing.Point(386, 9);
+            this.lblItemCategory.Location = new System.Drawing.Point(515, 11);
+            this.lblItemCategory.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblItemCategory.Name = "lblItemCategory";
-            this.lblItemCategory.Size = new System.Drawing.Size(51, 13);
+            this.lblItemCategory.Size = new System.Drawing.Size(51, 16);
             this.lblItemCategory.TabIndex = 0;
             this.lblItemCategory.Text = "التصنيف :";
             // 
             // lblBarCode
             // 
             this.lblBarCode.AutoSize = true;
-            this.lblBarCode.Location = new System.Drawing.Point(549, 9);
+            this.lblBarCode.Location = new System.Drawing.Point(732, 11);
+            this.lblBarCode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBarCode.Name = "lblBarCode";
-            this.lblBarCode.Size = new System.Drawing.Size(46, 13);
+            this.lblBarCode.Size = new System.Drawing.Size(53, 16);
             this.lblBarCode.TabIndex = 0;
             this.lblBarCode.Text = "الباركود :";
             // 
@@ -300,10 +322,12 @@
             this.UnitPrice,
             this.TotalPrice});
             this.dgvInvoice.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvInvoice.Location = new System.Drawing.Point(0, 139);
+            this.dgvInvoice.Location = new System.Drawing.Point(0, 175);
+            this.dgvInvoice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvInvoice.MultiSelect = false;
             this.dgvInvoice.Name = "dgvInvoice";
-            this.dgvInvoice.Size = new System.Drawing.Size(598, 312);
+            this.dgvInvoice.RowHeadersWidth = 51;
+            this.dgvInvoice.Size = new System.Drawing.Size(797, 384);
             this.dgvInvoice.TabIndex = 27;
             this.dgvInvoice.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dgvInvoice_CellValidating);
             this.dgvInvoice.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInvoice_CellValueChanged);
@@ -314,24 +338,29 @@
             // 
             this.ID.DataPropertyName = "ID";
             this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
             this.ID.Name = "ID";
             this.ID.Visible = false;
+            this.ID.Width = 125;
             // 
             // ItemID
             // 
             this.ItemID.DataPropertyName = "ItemID";
             this.ItemID.HeaderText = "ItemID";
+            this.ItemID.MinimumWidth = 6;
             this.ItemID.Name = "ItemID";
             this.ItemID.Visible = false;
+            this.ItemID.Width = 125;
             // 
             // ItemName
             // 
             this.ItemName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.ItemName.DataPropertyName = "ItemName";
             this.ItemName.HeaderText = "الصنف";
+            this.ItemName.MinimumWidth = 6;
             this.ItemName.Name = "ItemName";
             this.ItemName.ReadOnly = true;
-            this.ItemName.Width = 61;
+            this.ItemName.Width = 66;
             // 
             // Quantity
             // 
@@ -342,24 +371,28 @@
             this.Quantity.DefaultCellStyle = dataGridViewCellStyle1;
             this.Quantity.HeaderText = "الكمية";
             this.Quantity.MaxInputLength = 5;
+            this.Quantity.MinimumWidth = 6;
             this.Quantity.Name = "Quantity";
-            this.Quantity.Width = 61;
+            this.Quantity.Width = 65;
             // 
             // UnitID
             // 
             this.UnitID.DataPropertyName = "UnitID";
             this.UnitID.HeaderText = "UnitID";
+            this.UnitID.MinimumWidth = 6;
             this.UnitID.Name = "UnitID";
             this.UnitID.Visible = false;
+            this.UnitID.Width = 125;
             // 
             // UnitName
             // 
             this.UnitName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.UnitName.DataPropertyName = "UnitName";
             this.UnitName.HeaderText = "الوحدة";
+            this.UnitName.MinimumWidth = 6;
             this.UnitName.Name = "UnitName";
             this.UnitName.ReadOnly = true;
-            this.UnitName.Width = 61;
+            this.UnitName.Width = 67;
             // 
             // UnitPrice
             // 
@@ -369,9 +402,10 @@
             dataGridViewCellStyle2.NullValue = null;
             this.UnitPrice.DefaultCellStyle = dataGridViewCellStyle2;
             this.UnitPrice.HeaderText = "سعر الوحدة";
+            this.UnitPrice.MinimumWidth = 6;
             this.UnitPrice.Name = "UnitPrice";
             this.UnitPrice.ReadOnly = true;
-            this.UnitPrice.Width = 86;
+            this.UnitPrice.Width = 91;
             // 
             // TotalPrice
             // 
@@ -383,20 +417,22 @@
             dataGridViewCellStyle3.NullValue = null;
             this.TotalPrice.DefaultCellStyle = dataGridViewCellStyle3;
             this.TotalPrice.HeaderText = "إجمالي الصنف";
+            this.TotalPrice.MinimumWidth = 6;
             this.TotalPrice.Name = "TotalPrice";
             this.TotalPrice.ReadOnly = true;
-            this.TotalPrice.Width = 98;
+            this.TotalPrice.Width = 105;
             // 
             // tvcmbCategory
             // 
             this.tvcmbCategory.Direction = CustomControls.ucTreeViewComboBox.Directions.rtl;
-            this.tvcmbCategory.Location = new System.Drawing.Point(219, 70);
+            this.tvcmbCategory.Location = new System.Drawing.Point(292, 86);
+            this.tvcmbCategory.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.tvcmbCategory.Name = "tvcmbCategory";
             this.tvcmbCategory.RecursiveTable = true;
             this.tvcmbCategory.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tvcmbCategory.SelectedValue = ((object)(resources.GetObject("tvcmbCategory.SelectedValue")));
             this.tvcmbCategory.SelectionLevel = -1;
-            this.tvcmbCategory.Size = new System.Drawing.Size(158, 21);
+            this.tvcmbCategory.Size = new System.Drawing.Size(211, 26);
             this.tvcmbCategory.TabIndex = 28;
             this.tvcmbCategory.Tag = "";
             this.tvcmbCategory.AfterSelect += new CustomControls.ucTreeViewComboBox.AfterSelectHandler(this.tvcmbCategory_AfterSelect);
@@ -407,9 +443,10 @@
             this.pnlFooter.Controls.Add(this.txtTotalCash);
             this.pnlFooter.Controls.Add(this.lblTotalValue);
             this.pnlFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlFooter.Location = new System.Drawing.Point(0, 451);
+            this.pnlFooter.Location = new System.Drawing.Point(0, 559);
+            this.pnlFooter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlFooter.Name = "pnlFooter";
-            this.pnlFooter.Size = new System.Drawing.Size(598, 40);
+            this.pnlFooter.Size = new System.Drawing.Size(797, 49);
             this.pnlFooter.TabIndex = 29;
             // 
             // label1
@@ -417,9 +454,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(207, 7);
+            this.label1.Location = new System.Drawing.Point(276, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 19);
+            this.label1.Size = new System.Drawing.Size(38, 23);
             this.label1.TabIndex = 24;
             this.label1.Text = "جنيه";
             // 
@@ -427,10 +465,11 @@
             // 
             this.txtTotalCash.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotalCash.ForeColor = System.Drawing.Color.Navy;
-            this.txtTotalCash.Location = new System.Drawing.Point(261, 7);
+            this.txtTotalCash.Location = new System.Drawing.Point(348, 9);
+            this.txtTotalCash.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTotalCash.MaxLength = 50;
             this.txtTotalCash.Name = "txtTotalCash";
-            this.txtTotalCash.Size = new System.Drawing.Size(169, 26);
+            this.txtTotalCash.Size = new System.Drawing.Size(224, 30);
             this.txtTotalCash.TabIndex = 1;
             // 
             // lblTotalValue
@@ -438,35 +477,49 @@
             this.lblTotalValue.AutoSize = true;
             this.lblTotalValue.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalValue.ForeColor = System.Drawing.Color.Red;
-            this.lblTotalValue.Location = new System.Drawing.Point(466, 7);
+            this.lblTotalValue.Location = new System.Drawing.Point(621, 9);
+            this.lblTotalValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalValue.Name = "lblTotalValue";
-            this.lblTotalValue.Size = new System.Drawing.Size(129, 19);
+            this.lblTotalValue.Size = new System.Drawing.Size(157, 23);
             this.lblTotalValue.TabIndex = 0;
             this.lblTotalValue.Text = "إجمالي قيمة الأصناف :";
             // 
             // lblCustomer
             // 
             this.lblCustomer.AutoSize = true;
-            this.lblCustomer.Location = new System.Drawing.Point(407, 9);
+            this.lblCustomer.Location = new System.Drawing.Point(543, 11);
+            this.lblCustomer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCustomer.Name = "lblCustomer";
-            this.lblCustomer.Size = new System.Drawing.Size(45, 13);
+            this.lblCustomer.Size = new System.Drawing.Size(42, 16);
             this.lblCustomer.TabIndex = 31;
             this.lblCustomer.Text = "العميل :";
             // 
             // cbxCustomer
             // 
             this.cbxCustomer.FormattingEnabled = true;
-            this.cbxCustomer.Location = new System.Drawing.Point(251, 6);
+            this.cbxCustomer.Location = new System.Drawing.Point(335, 7);
+            this.cbxCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbxCustomer.Name = "cbxCustomer";
-            this.cbxCustomer.Size = new System.Drawing.Size(150, 21);
+            this.cbxCustomer.Size = new System.Drawing.Size(199, 24);
             this.cbxCustomer.TabIndex = 32;
             this.cbxCustomer.Tag = "1";
             // 
+            // pnlSearchItems
+            // 
+            this.pnlSearchItems.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlSearchItems.BackgroundImage")));
+            this.pnlSearchItems.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlSearchItems.Location = new System.Drawing.Point(14, 6);
+            this.pnlSearchItems.Name = "pnlSearchItems";
+            this.pnlSearchItems.Size = new System.Drawing.Size(30, 30);
+            this.pnlSearchItems.TabIndex = 40;
+            this.pnlSearchItems.Click += new System.EventHandler(this.pnlSearchItems_Click);
+            // 
             // frmInvoices
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(598, 516);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.ClientSize = new System.Drawing.Size(797, 635);
             this.Controls.Add(this.tvcmbCategory);
+            this.Margin = new System.Windows.Forms.Padding(9, 7, 9, 7);
             this.Name = "frmInvoices";
             this.Text = "مدير الأصناف - الفواتير";
             this.Load += new System.EventHandler(this.frmInvoices_Load);
@@ -521,5 +574,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalPrice;
         private System.Windows.Forms.Label lblCustomer;
         private System.Windows.Forms.ComboBox cbxCustomer;
+        private System.Windows.Forms.Panel pnlSearchItems;
     }
 }

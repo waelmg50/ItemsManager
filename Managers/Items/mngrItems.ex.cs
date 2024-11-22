@@ -19,6 +19,10 @@ namespace Managers
             return SqlAdoWrapper.ExecuteQueryCommand("Items_SelectByCategoryID",
                 new SqlParameter[] { new SqlParameter("@CategoryID", iCategoryID) }, false);
         }
+        public static DataTable GetItemsByKeyWord(string KeyWord)
+        {
+            return SqlAdoWrapper.ExecuteQueryCommand("Items_SelectByKeyWord", new SqlParameter[] { new SqlParameter("@KeyWord", KeyWord) }, false);
+        }
         public static decimal GetItemUnitPrice(int iItemID, int iUnitID)
         {
             try
