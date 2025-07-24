@@ -379,8 +379,8 @@ namespace ItemsManager
         {
             try
             {
-                Report.frmView_Expenses frmView_Expns = new Report.frmView_Expenses();
-                frmView_Expns.ShowDialog(this);
+                Report.frmExpencesReport frmExpenssRprt = new Report.frmExpencesReport();
+                frmExpenssRprt.ShowDialog(this);
             }
             catch (Exception ex)
             {

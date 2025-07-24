@@ -374,6 +374,9 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmExpencesReport.resx">
+      <DependentUpon>frmExpencesReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\frmItemsInReport.resx">
       <DependentUpon>frmItemsInReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -468,6 +471,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Report\frmExpencesReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmExpencesReport.Designer.cs">
+      <DependentUpon>frmExpencesReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Report\frmItemsInReport.cs">
       <SubType>Form</SubType>
@@ -594,6 +603,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Report\Expenses.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Report\Invoices.repx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

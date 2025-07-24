@@ -110,7 +110,7 @@ namespace ItemsManager.Items
             try
             {
                 base.DeleteDetails(iDetailID);
-                return mngrItemsInDetails.Delete(iDetailsID, sqltrnSave);
+                return mngrItemsInDetails.Delete(iDetailID, sqltrnSave);
             }
             catch (Exception ex)
             {
@@ -344,7 +344,7 @@ namespace ItemsManager.Items
                     dRow["UnitName"] = cmbUnitID.Text;
                     dRow["PurchasePrice"] = txtnPurchasePrice.Text;
                     tblDetails.Rows.Add(dRow);
-                    btnClean_Click(null, null);
+                    btnClean_Click(sender, e);
                     bChangesOccured = true;
                 }
             }
@@ -357,7 +357,7 @@ namespace ItemsManager.Items
         {
             try
             {
-                if (iDetailsID > 0 && !ilstRemovedDetailsID.Contains(iDetailsID))
+                if (sender is Button && ((Button)sender).Name == "btnClean" && iDetailsID > 0 && !ilstRemovedDetailsID.Contains(iDetailsID))
                     ilstRemovedDetailsID.Add(iDetailsID);
                 cmbUnitID.SelectedIndex = cmbItemID.SelectedIndex = -1;
                 txtnPurchasePrice.Text = cmbUnitID.Text = cmbItemID.Text = txtBarCode.Text = txtnQuantity.Text = string.Empty;

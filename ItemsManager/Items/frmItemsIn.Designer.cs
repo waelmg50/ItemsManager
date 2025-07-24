@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmItemsIn));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlFooter = new System.Windows.Forms.Panel();
             this.txtTotalCash = new System.Windows.Forms.TextBox();
             this.lblTotalValue = new System.Windows.Forms.Label();
             this.pnlItemsInControls = new System.Windows.Forms.Panel();
+            this.tvcmbCategory = new CustomControls.ucTreeViewComboBox();
             this.pnlSearchItems = new System.Windows.Forms.Panel();
             this.lblPound = new System.Windows.Forms.Label();
             this.txtnPurchasePrice = new CustomControls.NumericTextBox();
@@ -50,7 +51,6 @@
             this.txtBarCode = new System.Windows.Forms.TextBox();
             this.lblItemCategory = new System.Windows.Forms.Label();
             this.lblBarCode = new System.Windows.Forms.Label();
-            this.tvcmbCategory = new CustomControls.ucTreeViewComboBox();
             this.dgvItemsIn = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ItemID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,8 +81,9 @@
             this.pnlControls.Controls.Add(this.pnlFooter);
             this.pnlControls.Controls.Add(this.lblSupplier);
             this.pnlControls.Controls.Add(this.cbxSupplier);
+            this.pnlControls.Location = new System.Drawing.Point(0, 31);
             this.pnlControls.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.pnlControls.Size = new System.Drawing.Size(919, 734);
+            this.pnlControls.Size = new System.Drawing.Size(919, 730);
             this.pnlControls.Controls.SetChildIndex(this.cbxSupplier, 0);
             this.pnlControls.Controls.SetChildIndex(this.lblSupplier, 0);
             this.pnlControls.Controls.SetChildIndex(this.pnlFooter, 0);
@@ -101,7 +102,7 @@
             this.pnlFooter.Controls.Add(this.txtTotalCash);
             this.pnlFooter.Controls.Add(this.lblTotalValue);
             this.pnlFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlFooter.Location = new System.Drawing.Point(0, 733);
+            this.pnlFooter.Location = new System.Drawing.Point(0, 729);
             this.pnlFooter.Margin = new System.Windows.Forms.Padding(4);
             this.pnlFooter.Name = "pnlFooter";
             this.pnlFooter.Size = new System.Drawing.Size(919, 1);
@@ -147,11 +148,26 @@
             this.pnlItemsInControls.Controls.Add(this.lblItemCategory);
             this.pnlItemsInControls.Controls.Add(this.lblBarCode);
             this.pnlItemsInControls.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlItemsInControls.Location = new System.Drawing.Point(0, 49);
+            this.pnlItemsInControls.Location = new System.Drawing.Point(0, 45);
             this.pnlItemsInControls.Margin = new System.Windows.Forms.Padding(4);
             this.pnlItemsInControls.Name = "pnlItemsInControls";
             this.pnlItemsInControls.Size = new System.Drawing.Size(919, 119);
             this.pnlItemsInControls.TabIndex = 3;
+            // 
+            // tvcmbCategory
+            // 
+            this.tvcmbCategory.Direction = CustomControls.ucTreeViewComboBox.Directions.rtl;
+            this.tvcmbCategory.Location = new System.Drawing.Point(411, 10);
+            this.tvcmbCategory.Margin = new System.Windows.Forms.Padding(5);
+            this.tvcmbCategory.Name = "tvcmbCategory";
+            this.tvcmbCategory.RecursiveTable = true;
+            this.tvcmbCategory.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tvcmbCategory.SelectedValue = ((object)(resources.GetObject("tvcmbCategory.SelectedValue")));
+            this.tvcmbCategory.SelectionLevel = -1;
+            this.tvcmbCategory.Size = new System.Drawing.Size(211, 26);
+            this.tvcmbCategory.TabIndex = 25;
+            this.tvcmbCategory.Tag = "";
+            this.tvcmbCategory.AfterSelect += new CustomControls.ucTreeViewComboBox.AfterSelectHandler(this.tvcmbCategory_AfterSelect);
             // 
             // pnlSearchItems
             // 
@@ -325,21 +341,6 @@
             this.lblBarCode.TabIndex = 0;
             this.lblBarCode.Text = "الباركود :";
             // 
-            // tvcmbCategory
-            // 
-            this.tvcmbCategory.Direction = CustomControls.ucTreeViewComboBox.Directions.rtl;
-            this.tvcmbCategory.Location = new System.Drawing.Point(411, 10);
-            this.tvcmbCategory.Margin = new System.Windows.Forms.Padding(5);
-            this.tvcmbCategory.Name = "tvcmbCategory";
-            this.tvcmbCategory.RecursiveTable = true;
-            this.tvcmbCategory.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tvcmbCategory.SelectedValue = ((object)(resources.GetObject("tvcmbCategory.SelectedValue")));
-            this.tvcmbCategory.SelectionLevel = -1;
-            this.tvcmbCategory.Size = new System.Drawing.Size(211, 26);
-            this.tvcmbCategory.TabIndex = 25;
-            this.tvcmbCategory.Tag = "";
-            this.tvcmbCategory.AfterSelect += new CustomControls.ucTreeViewComboBox.AfterSelectHandler(this.tvcmbCategory_AfterSelect);
-            // 
             // dgvItemsIn
             // 
             this.dgvItemsIn.AllowUserToAddRows = false;
@@ -357,7 +358,7 @@
             this.UnitName,
             this.PurchasePrice});
             this.dgvItemsIn.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvItemsIn.Location = new System.Drawing.Point(0, 168);
+            this.dgvItemsIn.Location = new System.Drawing.Point(0, 164);
             this.dgvItemsIn.Margin = new System.Windows.Forms.Padding(4);
             this.dgvItemsIn.MultiSelect = false;
             this.dgvItemsIn.Name = "dgvItemsIn";
@@ -399,9 +400,9 @@
             // 
             this.Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Quantity.DataPropertyName = "Quantity";
-            dataGridViewCellStyle1.Format = "N2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.Quantity.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Format = "N2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.Quantity.DefaultCellStyle = dataGridViewCellStyle3;
             this.Quantity.HeaderText = "الكمية";
             this.Quantity.MaxInputLength = 5;
             this.Quantity.MinimumWidth = 6;
@@ -431,8 +432,8 @@
             // 
             this.PurchasePrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.PurchasePrice.DataPropertyName = "PurchasePrice";
-            dataGridViewCellStyle2.Format = "N2";
-            this.PurchasePrice.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Format = "N2";
+            this.PurchasePrice.DefaultCellStyle = dataGridViewCellStyle4;
             this.PurchasePrice.HeaderText = "سعر الشراء";
             this.PurchasePrice.MinimumWidth = 6;
             this.PurchasePrice.Name = "PurchasePrice";

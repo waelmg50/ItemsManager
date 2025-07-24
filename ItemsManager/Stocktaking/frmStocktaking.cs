@@ -96,7 +96,7 @@ namespace ItemsManager.Stocktaking
             try
             {
                 base.DeleteDetails(iDetailID);
-                return mngrStocktakingDetails.Delete(iDetailsID, sqltrnSave);
+                return mngrStocktakingDetails.Delete(iDetailID, sqltrnSave);
             }
             catch (Exception ex)
             {

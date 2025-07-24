@@ -42,7 +42,8 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(356, 7);
+            this.txtID.Location = new System.Drawing.Point(475, 9);
+            this.txtID.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             // 
             // pnlControls
             // 
@@ -54,7 +55,8 @@
             this.pnlControls.Controls.Add(this.txtStatement);
             this.pnlControls.Controls.Add(this.lblExpenseType);
             this.pnlControls.Controls.Add(this.lblStatement);
-            this.pnlControls.Size = new System.Drawing.Size(542, 169);
+            this.pnlControls.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pnlControls.Size = new System.Drawing.Size(723, 212);
             this.pnlControls.Controls.SetChildIndex(this.txtID, 0);
             this.pnlControls.Controls.SetChildIndex(this.lblID, 0);
             this.pnlControls.Controls.SetChildIndex(this.lblStatement, 0);
@@ -68,85 +70,95 @@
             // 
             // lblID
             // 
-            this.lblID.Location = new System.Drawing.Point(418, 7);
+            this.lblID.Location = new System.Drawing.Point(557, 9);
+            this.lblID.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             // 
             // txtStatement
             // 
-            this.txtStatement.Location = new System.Drawing.Point(131, 31);
+            this.txtStatement.Location = new System.Drawing.Point(175, 38);
+            this.txtStatement.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtStatement.MaxLength = 50;
             this.txtStatement.Name = "txtStatement";
-            this.txtStatement.Size = new System.Drawing.Size(279, 20);
+            this.txtStatement.Size = new System.Drawing.Size(371, 22);
             this.txtStatement.TabIndex = 4;
             this.txtStatement.Tag = "";
             // 
             // lblStatement
             // 
             this.lblStatement.AutoSize = true;
-            this.lblStatement.Location = new System.Drawing.Point(443, 31);
+            this.lblStatement.Location = new System.Drawing.Point(591, 38);
+            this.lblStatement.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStatement.Name = "lblStatement";
-            this.lblStatement.Size = new System.Drawing.Size(38, 13);
+            this.lblStatement.Size = new System.Drawing.Size(39, 16);
             this.lblStatement.TabIndex = 5;
             this.lblStatement.Text = "البيان :";
             // 
             // lblExpenseType
             // 
             this.lblExpenseType.AutoSize = true;
-            this.lblExpenseType.Location = new System.Drawing.Point(445, 55);
+            this.lblExpenseType.Location = new System.Drawing.Point(593, 68);
+            this.lblExpenseType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblExpenseType.Name = "lblExpenseType";
-            this.lblExpenseType.Size = new System.Drawing.Size(36, 13);
+            this.lblExpenseType.Size = new System.Drawing.Size(37, 16);
             this.lblExpenseType.TabIndex = 5;
             this.lblExpenseType.Text = "النوع :";
             // 
             // cmbTypeID
             // 
             this.cmbTypeID.FormattingEnabled = true;
-            this.cmbTypeID.Location = new System.Drawing.Point(131, 55);
+            this.cmbTypeID.Location = new System.Drawing.Point(175, 68);
+            this.cmbTypeID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbTypeID.Name = "cmbTypeID";
-            this.cmbTypeID.Size = new System.Drawing.Size(279, 21);
+            this.cmbTypeID.Size = new System.Drawing.Size(371, 24);
             this.cmbTypeID.TabIndex = 6;
             this.cmbTypeID.Tag = "1";
             // 
             // txtnValue
             // 
             this.txtnValue.IsInt = false;
-            this.txtnValue.Location = new System.Drawing.Point(246, 80);
+            this.txtnValue.Location = new System.Drawing.Point(328, 98);
+            this.txtnValue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtnValue.Name = "txtnValue";
-            this.txtnValue.Size = new System.Drawing.Size(164, 20);
+            this.txtnValue.Size = new System.Drawing.Size(217, 22);
             this.txtnValue.TabIndex = 15;
             this.txtnValue.Tag = "1";
             // 
             // lblValue
             // 
             this.lblValue.AutoSize = true;
-            this.lblValue.Location = new System.Drawing.Point(438, 80);
+            this.lblValue.Location = new System.Drawing.Point(584, 98);
+            this.lblValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblValue.Name = "lblValue";
-            this.lblValue.Size = new System.Drawing.Size(43, 13);
+            this.lblValue.Size = new System.Drawing.Size(39, 16);
             this.lblValue.TabIndex = 14;
             this.lblValue.Text = "القيمة :";
             // 
             // txtRemarks
             // 
-            this.txtRemarks.Location = new System.Drawing.Point(61, 104);
-            this.txtRemarks.MaxLength = 100;
+            this.txtRemarks.Location = new System.Drawing.Point(81, 128);
+            this.txtRemarks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRemarks.MaxLength = 150;
             this.txtRemarks.Multiline = true;
             this.txtRemarks.Name = "txtRemarks";
-            this.txtRemarks.Size = new System.Drawing.Size(349, 58);
+            this.txtRemarks.Size = new System.Drawing.Size(464, 70);
             this.txtRemarks.TabIndex = 16;
             this.txtRemarks.Tag = "";
             // 
             // lblRemarks
             // 
             this.lblRemarks.AutoSize = true;
-            this.lblRemarks.Location = new System.Drawing.Point(426, 104);
+            this.lblRemarks.Location = new System.Drawing.Point(568, 128);
+            this.lblRemarks.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRemarks.Name = "lblRemarks";
-            this.lblRemarks.Size = new System.Drawing.Size(55, 13);
+            this.lblRemarks.Size = new System.Drawing.Size(56, 16);
             this.lblRemarks.TabIndex = 17;
             this.lblRemarks.Text = "ملاحظات :";
             // 
             // frmExpenses
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(542, 194);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.ClientSize = new System.Drawing.Size(723, 239);
+            this.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.Name = "frmExpenses";
             this.Text = "مدير الأصناف - المصروفات";
             this.Load += new System.EventHandler(this.frmExpenses_Load);

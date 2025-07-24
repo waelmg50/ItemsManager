@@ -50,20 +50,21 @@ namespace Utilities
 		/// <returns>Returns true if the input string is an integer number otherwise it returns false.</returns>
 		public static bool CheckNumberInt(string strInput)
 		{
-            if (strInput.Length == 0)
-                return false;
-            if (strInput[0] == '-')
-                strInput = strInput.Substring(1);
-			foreach(char A in strInput.ToCharArray())
-			{
-				if(	A == '0' ||A == '1' ||A == '2' ||A == '3' ||
-					A == '4' ||A == '5'||A == '6' ||A == '7' ||
-					A == '8' ||A == '9')
-					continue;
-				else
-					return false;
-			}
-			return true;
+            return int.TryParse(strInput, out int val);
+   //         if (strInput.Length == 0)
+   //             return false;
+   //         if (strInput[0] == '-')
+   //             strInput = strInput.Substring(1);
+			//foreach(char A in strInput.ToCharArray())
+			//{
+			//	if(	A == '0' ||A == '1' ||A == '2' ||A == '3' ||
+			//		A == '4' ||A == '5'||A == '6' ||A == '7' ||
+			//		A == '8' ||A == '9')
+			//		continue;
+			//	else
+			//		return false;
+			//}
+			//return true;
 		}
         /// <summary>
         /// Checks whether an object  is an integer number or not.
@@ -84,22 +85,23 @@ namespace Utilities
 		/// <returns>Returns true if the input string is a double number otherwise it returns false.</returns>
 		public static bool CheckNumberDouble(string strInput)
 		{
-            if (strInput.Length == 0)
-                return false;
-			if(strInput.StartsWith(".")) return false;
-			if(strInput.EndsWith(".")) return false;
-			string SubInput = strInput.Substring(strInput.IndexOf('.') + 1);
-			if(SubInput.IndexOf('.') != -1) return false;
-			foreach(char A in strInput.ToCharArray())
-			{
-				if(	A == '0' ||A == '1' ||A == '2' ||A == '3' ||
-					A == '4' ||A == '5'||A == '6' ||A == '7' ||
-					A == '8' ||A == '9'||A=='.')
-					continue;
-				else
-					return false;
-			}
-			return true;
+            return double.TryParse(strInput, out double d);
+   //         if (strInput.Length == 0)
+   //             return false;
+			//if(strInput.StartsWith(".")) return false;
+			//if(strInput.EndsWith(".")) return false;
+			//string SubInput = strInput.Substring(strInput.IndexOf('.') + 1);
+			//if(SubInput.IndexOf('.') != -1) return false;
+			//foreach(char A in strInput.ToCharArray())
+			//{
+			//	if(	A == '0' ||A == '1' ||A == '2' ||A == '3' ||
+			//		A == '4' ||A == '5'||A == '6' ||A == '7' ||
+			//		A == '8' ||A == '9'||A=='.')
+			//		continue;
+			//	else
+			//		return false;
+			//}
+			//return true;
 		}
         /// <summary>
         /// Checks whether an object is a double number or not.

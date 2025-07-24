@@ -49,6 +49,10 @@ namespace ItemsManager.Shifts
                         lblTotalInvoicesValue.Text = Convert.ToDecimal(tblShiftData.Rows[0]["TotalInvoices"]).ToString("0.00");
                     else
                         lblTotalInvoicesValue.Text = "0";
+                    if (Helper.CheckNumberDouble(tblShiftData.Rows[0]["TotalProfit"]))
+                        lblTotalProfitValue.Text = Convert.ToDecimal(tblShiftData.Rows[0]["TotalProfit"]).ToString("0.00");
+                    else
+                        lblTotalProfitValue.Text = "0";
                     if (Helper.CheckNumberDouble(tblShiftData.Rows[0]["TotalExpenses"]))
                         lblExpensesValue.Text = Convert.ToDecimal(tblShiftData.Rows[0]["TotalExpenses"]).ToString("0.00");
                     else
@@ -92,10 +96,8 @@ namespace ItemsManager.Shifts
                 else
                 {
 
-                    lblBoxValue.Text = lblCashInValue.Text = lblCashOutValue.Text = lblExpensesValue.Text = lblLackValue.Text = lblShiftPeriodValue.Text =
-                        lblTotalInvoicesValue.Text = "0";
-                    lblUserInName.Text = lblShiftStatusValue.Text = lblEndDateValue.Text = lblEndTimeValue.Text = lblBeginDateValue.Text
-                        = lblBeginTimeValue.Text = lblUserOutName.Text = string.Empty;
+                    lblBoxValue.Text = lblCashInValue.Text = lblCashOutValue.Text = lblExpensesValue.Text = lblLackValue.Text = lblShiftPeriodValue.Text = lblTotalInvoicesValue.Text = "0";
+                    lblUserInName.Text = lblShiftStatusValue.Text = lblEndDateValue.Text = lblEndTimeValue.Text = lblBeginDateValue.Text = lblBeginTimeValue.Text = lblUserOutName.Text = string.Empty;
                 }
             }
             catch (Exception ex)
@@ -113,7 +115,7 @@ namespace ItemsManager.Shifts
             DevExpress.XtraReports.UI.XtraReport rptShiftReport = new DevExpress.XtraReports.UI.XtraReport();
             string strReportPath = $@"{Application.StartupPath}\Report\ReportsFiles\Shifts.repx";
             rptShiftReport.LoadLayout(strReportPath);
-            rptShiftReport.DataSource = SqlAdoWrapper.ExecuteQueryCommand("vwShiftsData_SelectByShiftID", new System.Data.SqlClient.SqlParameter[] { new System.Data.SqlClient.SqlParameter("@ShiftID", iRecordID) }, false);
+            rptShiftReport.DataSource = mngrShifts.GetShiftWithExternalData(iRecordID); //SqlAdoWrapper.ExecuteQueryCommand("vwShiftsData_SelectByShiftID", new System.Data.SqlClient.SqlParameter[] { new System.Data.SqlClient.SqlParameter("@ShiftID", iRecordID) }, false);
             frmDisplayReport frmDspRprt = new frmDisplayReport() { ReportDocumnet = rptShiftReport };
             frmDspRprt.ShowDialog(this);
         }

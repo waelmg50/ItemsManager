@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -36,8 +38,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblBeginDate = new System.Windows.Forms.Label();
             this.lblBeginDateValue = new System.Windows.Forms.Label();
             this.lblBeginTime = new System.Windows.Forms.Label();
@@ -68,10 +68,17 @@
             this.lblLack = new System.Windows.Forms.Label();
             this.lblLackValue = new System.Windows.Forms.Label();
             this.grpbxTotals = new System.Windows.Forms.GroupBox();
+            this.lblTotalProfit = new System.Windows.Forms.Label();
+            this.lblTotalProfitValue = new System.Windows.Forms.Label();
             this.grpbxDates = new System.Windows.Forms.GroupBox();
             this.tabcntShiftDetails = new System.Windows.Forms.TabControl();
             this.tpItemsIn = new System.Windows.Forms.TabPage();
             this.dgvItemsIn = new System.Windows.Forms.DataGridView();
+            this.dgtbxItemsInID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgtbxItemsInDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgtbxcItemsInTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgtbxcItemsInUserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgybxcSupplierName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tpInvoices = new System.Windows.Forms.TabPage();
             this.dgvInvoices = new System.Windows.Forms.DataGridView();
             this.dgtbxcInvoiceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -88,15 +95,13 @@
             this.tpExpenses = new System.Windows.Forms.TabPage();
             this.dgvExpenses = new System.Windows.Forms.DataGridView();
             this.dgtbxcExpensesID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvtbxcTypeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvtbxcShiftID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvtbxcExpDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvtbxcExpensesType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvtbxcExpensesStatement = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvtbxcExpensesRemarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvtbxcExpensesValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgtbxItemsInID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgtbxItemsInDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgtbxcItemsInTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgtbxcItemsInUserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgybxcSupplierName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlControls.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errprvForm)).BeginInit();
             this.grpbxTotals.SuspendLayout();
@@ -115,7 +120,7 @@
             // txtID
             // 
             this.txtID.Location = new System.Drawing.Point(760, 6);
-            this.txtID.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtID.Margin = new System.Windows.Forms.Padding(5);
             this.txtID.Size = new System.Drawing.Size(96, 22);
             // 
             // pnlControls
@@ -139,7 +144,7 @@
             this.pnlControls.Controls.Add(this.grpbxTotals);
             this.pnlControls.ForeColor = System.Drawing.Color.MediumBlue;
             this.pnlControls.Location = new System.Drawing.Point(0, 31);
-            this.pnlControls.Size = new System.Drawing.Size(989, 604);
+            this.pnlControls.Size = new System.Drawing.Size(989, 641);
             this.pnlControls.Controls.SetChildIndex(this.grpbxTotals, 0);
             this.pnlControls.Controls.SetChildIndex(this.lblUserOut, 0);
             this.pnlControls.Controls.SetChildIndex(this.txtID, 0);
@@ -576,7 +581,9 @@
             // 
             // grpbxTotals
             // 
+            this.grpbxTotals.Controls.Add(this.lblTotalProfit);
             this.grpbxTotals.Controls.Add(this.lblTotalInvoices);
+            this.grpbxTotals.Controls.Add(this.lblTotalProfitValue);
             this.grpbxTotals.Controls.Add(this.lblTotalInvoicesValue);
             this.grpbxTotals.Controls.Add(this.lblExpenses);
             this.grpbxTotals.Controls.Add(this.lblLack);
@@ -585,13 +592,42 @@
             this.grpbxTotals.Controls.Add(this.lblLackValue);
             this.grpbxTotals.Controls.Add(this.lblBox);
             this.grpbxTotals.Location = new System.Drawing.Point(5, 196);
-            this.grpbxTotals.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpbxTotals.Margin = new System.Windows.Forms.Padding(4);
             this.grpbxTotals.Name = "grpbxTotals";
-            this.grpbxTotals.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.grpbxTotals.Size = new System.Drawing.Size(973, 64);
+            this.grpbxTotals.Padding = new System.Windows.Forms.Padding(4);
+            this.grpbxTotals.Size = new System.Drawing.Size(973, 104);
             this.grpbxTotals.TabIndex = 22;
             this.grpbxTotals.TabStop = false;
             this.grpbxTotals.Text = "الإجماليات :";
+            // 
+            // lblTotalProfit
+            // 
+            this.lblTotalProfit.AutoSize = true;
+            this.lblTotalProfit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalProfit.ForeColor = System.Drawing.Color.MediumBlue;
+            this.lblTotalProfit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblTotalProfit.Location = new System.Drawing.Point(901, 66);
+            this.lblTotalProfit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotalProfit.Name = "lblTotalProfit";
+            this.lblTotalProfit.Size = new System.Drawing.Size(68, 23);
+            this.lblTotalProfit.TabIndex = 6;
+            this.lblTotalProfit.Text = "الربحية :";
+            // 
+            // lblTotalProfitValue
+            // 
+            this.lblTotalProfitValue.BackColor = System.Drawing.Color.LightYellow;
+            this.lblTotalProfitValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblTotalProfitValue.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalProfitValue.ForeColor = System.Drawing.Color.DeepPink;
+            this.lblTotalProfitValue.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblTotalProfitValue.Location = new System.Drawing.Point(735, 60);
+            this.lblTotalProfitValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotalProfitValue.Name = "lblTotalProfitValue";
+            this.lblTotalProfitValue.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblTotalProfitValue.Size = new System.Drawing.Size(118, 35);
+            this.lblTotalProfitValue.TabIndex = 7;
+            this.lblTotalProfitValue.Text = "0";
+            this.lblTotalProfitValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // grpbxDates
             // 
@@ -604,9 +640,9 @@
             this.grpbxDates.Controls.Add(this.lblEndTimeValue);
             this.grpbxDates.Controls.Add(this.lblEndDateValue);
             this.grpbxDates.Location = new System.Drawing.Point(9, 32);
-            this.grpbxDates.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpbxDates.Margin = new System.Windows.Forms.Padding(4);
             this.grpbxDates.Name = "grpbxDates";
-            this.grpbxDates.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpbxDates.Padding = new System.Windows.Forms.Padding(4);
             this.grpbxDates.Size = new System.Drawing.Size(973, 64);
             this.grpbxDates.TabIndex = 23;
             this.grpbxDates.TabStop = false;
@@ -619,8 +655,8 @@
             this.tabcntShiftDetails.Controls.Add(this.tpStocktaking);
             this.tabcntShiftDetails.Controls.Add(this.tpExpenses);
             this.tabcntShiftDetails.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tabcntShiftDetails.Location = new System.Drawing.Point(0, 267);
-            this.tabcntShiftDetails.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabcntShiftDetails.Location = new System.Drawing.Point(0, 304);
+            this.tabcntShiftDetails.Margin = new System.Windows.Forms.Padding(4);
             this.tabcntShiftDetails.Name = "tabcntShiftDetails";
             this.tabcntShiftDetails.RightToLeftLayout = true;
             this.tabcntShiftDetails.SelectedIndex = 0;
@@ -631,7 +667,7 @@
             // 
             this.tpItemsIn.Controls.Add(this.dgvItemsIn);
             this.tpItemsIn.Location = new System.Drawing.Point(4, 25);
-            this.tpItemsIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpItemsIn.Margin = new System.Windows.Forms.Padding(4);
             this.tpItemsIn.Name = "tpItemsIn";
             this.tpItemsIn.Size = new System.Drawing.Size(979, 306);
             this.tpItemsIn.TabIndex = 3;
@@ -652,20 +688,74 @@
             this.dgybxcSupplierName});
             this.dgvItemsIn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvItemsIn.Location = new System.Drawing.Point(0, 0);
-            this.dgvItemsIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvItemsIn.Margin = new System.Windows.Forms.Padding(4);
             this.dgvItemsIn.Name = "dgvItemsIn";
             this.dgvItemsIn.RowHeadersWidth = 51;
             this.dgvItemsIn.Size = new System.Drawing.Size(979, 306);
             this.dgvItemsIn.TabIndex = 0;
             this.dgvItemsIn.DoubleClick += new System.EventHandler(this.dgvOperation_DoubleClick);
             // 
+            // dgtbxItemsInID
+            // 
+            this.dgtbxItemsInID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgtbxItemsInID.DataPropertyName = "ID";
+            this.dgtbxItemsInID.HeaderText = "المسلسل";
+            this.dgtbxItemsInID.MinimumWidth = 6;
+            this.dgtbxItemsInID.Name = "dgtbxItemsInID";
+            this.dgtbxItemsInID.ReadOnly = true;
+            this.dgtbxItemsInID.Width = 76;
+            // 
+            // dgtbxItemsInDate
+            // 
+            this.dgtbxItemsInDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgtbxItemsInDate.DataPropertyName = "InDate";
+            dataGridViewCellStyle1.Format = "d";
+            dataGridViewCellStyle1.NullValue = null;
+            this.dgtbxItemsInDate.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgtbxItemsInDate.HeaderText = "التاريخ";
+            this.dgtbxItemsInDate.MinimumWidth = 6;
+            this.dgtbxItemsInDate.Name = "dgtbxItemsInDate";
+            this.dgtbxItemsInDate.ReadOnly = true;
+            this.dgtbxItemsInDate.Width = 70;
+            // 
+            // dgtbxcItemsInTime
+            // 
+            this.dgtbxcItemsInTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgtbxcItemsInTime.DataPropertyName = "InDate";
+            dataGridViewCellStyle2.Format = "T";
+            dataGridViewCellStyle2.NullValue = null;
+            this.dgtbxcItemsInTime.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgtbxcItemsInTime.HeaderText = "الوقت";
+            this.dgtbxcItemsInTime.MinimumWidth = 6;
+            this.dgtbxcItemsInTime.Name = "dgtbxcItemsInTime";
+            this.dgtbxcItemsInTime.ReadOnly = true;
+            this.dgtbxcItemsInTime.Width = 63;
+            // 
+            // dgtbxcItemsInUserName
+            // 
+            this.dgtbxcItemsInUserName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgtbxcItemsInUserName.DataPropertyName = "FullName";
+            this.dgtbxcItemsInUserName.HeaderText = "المستخدم";
+            this.dgtbxcItemsInUserName.MinimumWidth = 6;
+            this.dgtbxcItemsInUserName.Name = "dgtbxcItemsInUserName";
+            this.dgtbxcItemsInUserName.ReadOnly = true;
+            this.dgtbxcItemsInUserName.Width = 79;
+            // 
+            // dgybxcSupplierName
+            // 
+            this.dgybxcSupplierName.DataPropertyName = "SupplierName";
+            this.dgybxcSupplierName.HeaderText = "اسم المورد";
+            this.dgybxcSupplierName.MinimumWidth = 6;
+            this.dgybxcSupplierName.Name = "dgybxcSupplierName";
+            this.dgybxcSupplierName.Width = 125;
+            // 
             // tpInvoices
             // 
             this.tpInvoices.Controls.Add(this.dgvInvoices);
             this.tpInvoices.Location = new System.Drawing.Point(4, 25);
-            this.tpInvoices.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpInvoices.Margin = new System.Windows.Forms.Padding(4);
             this.tpInvoices.Name = "tpInvoices";
-            this.tpInvoices.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpInvoices.Padding = new System.Windows.Forms.Padding(4);
             this.tpInvoices.Size = new System.Drawing.Size(979, 306);
             this.tpInvoices.TabIndex = 0;
             this.tpInvoices.Text = "الفواتير";
@@ -685,7 +775,7 @@
             this.dgtbxcInvoiceTotal});
             this.dgvInvoices.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvInvoices.Location = new System.Drawing.Point(4, 4);
-            this.dgvInvoices.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvInvoices.Margin = new System.Windows.Forms.Padding(4);
             this.dgvInvoices.Name = "dgvInvoices";
             this.dgvInvoices.RowHeadersWidth = 51;
             this.dgvInvoices.Size = new System.Drawing.Size(971, 298);
@@ -755,9 +845,9 @@
             // 
             this.tpStocktaking.Controls.Add(this.dgvStocktaking);
             this.tpStocktaking.Location = new System.Drawing.Point(4, 25);
-            this.tpStocktaking.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpStocktaking.Margin = new System.Windows.Forms.Padding(4);
             this.tpStocktaking.Name = "tpStocktaking";
-            this.tpStocktaking.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpStocktaking.Padding = new System.Windows.Forms.Padding(4);
             this.tpStocktaking.Size = new System.Drawing.Size(979, 306);
             this.tpStocktaking.TabIndex = 1;
             this.tpStocktaking.Text = "الجرد";
@@ -776,7 +866,7 @@
             this.dgtbxcStocktakingUserName});
             this.dgvStocktaking.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvStocktaking.Location = new System.Drawing.Point(4, 4);
-            this.dgvStocktaking.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvStocktaking.Margin = new System.Windows.Forms.Padding(4);
             this.dgvStocktaking.Name = "dgvStocktaking";
             this.dgvStocktaking.RowHeadersWidth = 51;
             this.dgvStocktaking.Size = new System.Drawing.Size(971, 298);
@@ -830,9 +920,9 @@
             // 
             this.tpExpenses.Controls.Add(this.dgvExpenses);
             this.tpExpenses.Location = new System.Drawing.Point(4, 25);
-            this.tpExpenses.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpExpenses.Margin = new System.Windows.Forms.Padding(4);
             this.tpExpenses.Name = "tpExpenses";
-            this.tpExpenses.Size = new System.Drawing.Size(1308, 306);
+            this.tpExpenses.Size = new System.Drawing.Size(979, 306);
             this.tpExpenses.TabIndex = 2;
             this.tpExpenses.Text = "المصاريف";
             this.tpExpenses.UseVisualStyleBackColor = true;
@@ -845,16 +935,19 @@
             this.dgvExpenses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvExpenses.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgtbxcExpensesID,
+            this.dgvtbxcTypeID,
+            this.dgvtbxcShiftID,
+            this.dgvtbxcExpDate,
             this.dgvtbxcExpensesType,
             this.dgvtbxcExpensesStatement,
             this.dgvtbxcExpensesRemarks,
             this.dgvtbxcExpensesValue});
             this.dgvExpenses.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvExpenses.Location = new System.Drawing.Point(0, 0);
-            this.dgvExpenses.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvExpenses.Margin = new System.Windows.Forms.Padding(4);
             this.dgvExpenses.Name = "dgvExpenses";
             this.dgvExpenses.RowHeadersWidth = 51;
-            this.dgvExpenses.Size = new System.Drawing.Size(1308, 306);
+            this.dgvExpenses.Size = new System.Drawing.Size(979, 306);
             this.dgvExpenses.TabIndex = 2;
             this.dgvExpenses.DoubleClick += new System.EventHandler(this.dgvOperation_DoubleClick);
             // 
@@ -867,6 +960,32 @@
             this.dgtbxcExpensesID.Name = "dgtbxcExpensesID";
             this.dgtbxcExpensesID.ReadOnly = true;
             this.dgtbxcExpensesID.Width = 70;
+            // 
+            // dgvtbxcTypeID
+            // 
+            this.dgvtbxcTypeID.DataPropertyName = "TypeID";
+            this.dgvtbxcTypeID.HeaderText = "Type ID";
+            this.dgvtbxcTypeID.MinimumWidth = 6;
+            this.dgvtbxcTypeID.Name = "dgvtbxcTypeID";
+            this.dgvtbxcTypeID.Visible = false;
+            this.dgvtbxcTypeID.Width = 125;
+            // 
+            // dgvtbxcShiftID
+            // 
+            this.dgvtbxcShiftID.DataPropertyName = "ShiftID";
+            this.dgvtbxcShiftID.HeaderText = "Shift ID";
+            this.dgvtbxcShiftID.MinimumWidth = 6;
+            this.dgvtbxcShiftID.Name = "dgvtbxcShiftID";
+            this.dgvtbxcShiftID.Visible = false;
+            this.dgvtbxcShiftID.Width = 125;
+            // 
+            // dgvtbxcExpDate
+            // 
+            this.dgvtbxcExpDate.DataPropertyName = "ExpDate";
+            this.dgvtbxcExpDate.HeaderText = "تاريخ المصروف";
+            this.dgvtbxcExpDate.MinimumWidth = 6;
+            this.dgvtbxcExpDate.Name = "dgvtbxcExpDate";
+            this.dgvtbxcExpDate.Width = 125;
             // 
             // dgvtbxcExpensesType
             // 
@@ -914,64 +1033,10 @@
             this.dgvtbxcExpensesValue.ReadOnly = true;
             this.dgvtbxcExpensesValue.Width = 62;
             // 
-            // dgtbxItemsInID
-            // 
-            this.dgtbxItemsInID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgtbxItemsInID.DataPropertyName = "ID";
-            this.dgtbxItemsInID.HeaderText = "المسلسل";
-            this.dgtbxItemsInID.MinimumWidth = 6;
-            this.dgtbxItemsInID.Name = "dgtbxItemsInID";
-            this.dgtbxItemsInID.ReadOnly = true;
-            this.dgtbxItemsInID.Width = 76;
-            // 
-            // dgtbxItemsInDate
-            // 
-            this.dgtbxItemsInDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgtbxItemsInDate.DataPropertyName = "InDate";
-            dataGridViewCellStyle1.Format = "d";
-            dataGridViewCellStyle1.NullValue = null;
-            this.dgtbxItemsInDate.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgtbxItemsInDate.HeaderText = "التاريخ";
-            this.dgtbxItemsInDate.MinimumWidth = 6;
-            this.dgtbxItemsInDate.Name = "dgtbxItemsInDate";
-            this.dgtbxItemsInDate.ReadOnly = true;
-            this.dgtbxItemsInDate.Width = 70;
-            // 
-            // dgtbxcItemsInTime
-            // 
-            this.dgtbxcItemsInTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgtbxcItemsInTime.DataPropertyName = "InDate";
-            dataGridViewCellStyle2.Format = "T";
-            dataGridViewCellStyle2.NullValue = null;
-            this.dgtbxcItemsInTime.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgtbxcItemsInTime.HeaderText = "الوقت";
-            this.dgtbxcItemsInTime.MinimumWidth = 6;
-            this.dgtbxcItemsInTime.Name = "dgtbxcItemsInTime";
-            this.dgtbxcItemsInTime.ReadOnly = true;
-            this.dgtbxcItemsInTime.Width = 63;
-            // 
-            // dgtbxcItemsInUserName
-            // 
-            this.dgtbxcItemsInUserName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgtbxcItemsInUserName.DataPropertyName = "FullName";
-            this.dgtbxcItemsInUserName.HeaderText = "المستخدم";
-            this.dgtbxcItemsInUserName.MinimumWidth = 6;
-            this.dgtbxcItemsInUserName.Name = "dgtbxcItemsInUserName";
-            this.dgtbxcItemsInUserName.ReadOnly = true;
-            this.dgtbxcItemsInUserName.Width = 79;
-            // 
-            // dgybxcSupplierName
-            // 
-            this.dgybxcSupplierName.DataPropertyName = "SupplierName";
-            this.dgybxcSupplierName.HeaderText = "اسم المورد";
-            this.dgybxcSupplierName.MinimumWidth = 6;
-            this.dgybxcSupplierName.Name = "dgybxcSupplierName";
-            this.dgybxcSupplierName.Width = 125;
-            // 
             // frmShiftDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.ClientSize = new System.Drawing.Size(989, 635);
+            this.ClientSize = new System.Drawing.Size(989, 672);
             this.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.Name = "frmShiftDetails";
             this.Text = "مدير الأصناف - تفاصيل الورديات";
@@ -1047,15 +1112,20 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgtbxcStocktakingDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgtbxcStocktakingTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgtbxcStocktakingUserName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgtbxcExpensesID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvtbxcExpensesType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvtbxcExpensesStatement;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvtbxcExpensesRemarks;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvtbxcExpensesValue;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgtbxItemsInID;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgtbxItemsInDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgtbxcItemsInTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgtbxcItemsInUserName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgybxcSupplierName;
+        private System.Windows.Forms.Label lblTotalProfit;
+        private System.Windows.Forms.Label lblTotalProfitValue;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgtbxcExpensesID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvtbxcTypeID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvtbxcShiftID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvtbxcExpDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvtbxcExpensesType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvtbxcExpensesStatement;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvtbxcExpensesRemarks;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvtbxcExpensesValue;
     }
 }

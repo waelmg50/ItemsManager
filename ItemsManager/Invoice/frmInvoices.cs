@@ -118,7 +118,7 @@ namespace ItemsManager.Invoice
             try
             {
                 base.DeleteDetails(iDetailID);
-                return mngrInvoiceDetails.Delete(iDetailsID, sqltrnSave);
+                return mngrInvoiceDetails.Delete(iDetailID, sqltrnSave);
             }
             catch (Exception ex)
             {
@@ -439,7 +439,7 @@ namespace ItemsManager.Invoice
                         if (!RecordsFunctions.IsDataExists("ItemsUnits", "ItemID", iItemID.ToString(), 0))
                         {
                             Helper.ShowMessage(Resources.ProgramMessages.MesNoExistingItemUnit);
-                            btnClean_Click(null, null);
+                            btnClean_Click(sender, e);
                             txtBarCode.Focus();
                             return;
                         }
@@ -521,7 +521,7 @@ namespace ItemsManager.Invoice
                         if (cmbUnitID.Items.Count <= 0 && !bBarCodeKeyDwon)
                         {
                             Helper.ShowMessage(Resources.ProgramMessages.MesNoExistingItemUnit);
-                            btnClean_Click(null, null);
+                            btnClean_Click(sender, e);
                             return;
                         }
                         if (!bBarCodeKeyDwon)
@@ -531,7 +531,7 @@ namespace ItemsManager.Invoice
                             if (dExistingQuantity <= 0m)
                             {
                                 Helper.ShowMessage(Resources.ProgramMessages.MesNoExistingItemQuantity);
-                                btnClean_Click(null, null);
+                                btnClean_Click(sender, e);
                                 return;
                             }
                         }
@@ -568,7 +568,7 @@ namespace ItemsManager.Invoice
                     dRow["UnitPrice"] = txtnUnitPrice.Text;
                     dRow["TotalPrice"] = txtnTotalPrice.Text;
                     tblDetails.Rows.Add(dRow);
-                    btnClean_Click(null, null);
+                    btnClean_Click(sender, e);
                 }
             }
             catch (Exception ex)
@@ -580,7 +580,7 @@ namespace ItemsManager.Invoice
         {
             try
             {
-                if (iDetailsID > 0 && !ilstRemovedDetailsID.Contains(iDetailsID))
+                if (sender is Button && ((Button)sender).Name == "btnClean" && iDetailsID > 0 && !ilstRemovedDetailsID.Contains(iDetailsID))
                     ilstRemovedDetailsID.Add(iDetailsID);
                 cmbUnitID.SelectedIndex = cmbItemID.SelectedIndex = -1;
                 cmbUnitID.Text = cmbItemID.Text = txtBarCode.Text = txtnTotalPrice.Text = txtnUnitPrice.Text = txtnQuantity.Text = string.Empty;
@@ -605,7 +605,7 @@ namespace ItemsManager.Invoice
                     if (dExistingQuantity <= 0m)
                     {
                         Helper.ShowMessage(Resources.ProgramMessages.MesNoExistingItemQuantity);
-                        btnClean_Click(null, null);
+                        btnClean_Click(sender, e);
                         return;
                     }
                     if (dExistingQuantity < Convert.ToDecimal(txtnQuantity.Text))
@@ -616,7 +616,7 @@ namespace ItemsManager.Invoice
                             txtnQuantity.Text = dExistingQuantity.ToString();
                         else
                         {
-                            btnClean_Click(null, null);
+                            btnClean_Click(sender, e);
                             return;
                         }
                     }

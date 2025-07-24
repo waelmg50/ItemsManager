@@ -63,16 +63,17 @@ namespace ItemsManager
                 if (dgvSearchRes.Columns.Count > 0)
                     dgvSearchRes.Columns.Clear();
                 DataTable tblSearchColummns = SqlAdoWrapper.GetTableColumnNames(strTableName, false);
-                foreach (DataRow drowColumn in tblSearchColummns.Rows)
-                {
-                    DataGridViewTextBoxColumn dgvcSearchColumn = new DataGridViewTextBoxColumn();
-                    dgvcSearchColumn.HeaderText = drowColumn["DisplayName"].ToString();
-                    dgvcSearchColumn.DataPropertyName = drowColumn["DBName"].ToString();
-                    dgvcSearchColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-                    dgvcSearchColumn.ValueType = typeof(string);
-                    dgvcSearchColumn.Name = "dgvtbxc" + drowColumn["DBName"].ToString();
-                    dgvSearchRes.Columns.Add(dgvcSearchColumn);
-                }
+                if (tblSearchColummns != null && tblSearchColummns.Rows.Count > 0)
+                    foreach (DataRow drowColumn in tblSearchColummns.Rows)
+                    {
+                        DataGridViewTextBoxColumn dgvcSearchColumn = new DataGridViewTextBoxColumn();
+                        dgvcSearchColumn.HeaderText = drowColumn["DisplayName"].ToString();
+                        dgvcSearchColumn.DataPropertyName = drowColumn["DBName"].ToString();
+                        dgvcSearchColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+                        dgvcSearchColumn.ValueType = typeof(string);
+                        dgvcSearchColumn.Name = "dgvtbxc" + drowColumn["DBName"].ToString();
+                        dgvSearchRes.Columns.Add(dgvcSearchColumn);
+                    }
             }
             catch (Exception ex)
             {
@@ -198,7 +199,7 @@ namespace ItemsManager
                         dgvSearchRes.DataSource = tblSearchResult;
                     else
                         Helper.ShowMessage(Resources.ProgramMessages.MesNoResultsFound);
-                }                
+                }
             }
             catch (Exception ex)
             {

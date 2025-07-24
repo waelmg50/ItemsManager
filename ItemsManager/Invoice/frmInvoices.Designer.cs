@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInvoices));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlItemsInControls = new System.Windows.Forms.Panel();
+            this.pnlSearchItems = new System.Windows.Forms.Panel();
             this.lblPound = new System.Windows.Forms.Label();
             this.btnClean = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -65,7 +66,6 @@
             this.lblTotalValue = new System.Windows.Forms.Label();
             this.lblCustomer = new System.Windows.Forms.Label();
             this.cbxCustomer = new System.Windows.Forms.ComboBox();
-            this.pnlSearchItems = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.tblDetails)).BeginInit();
             this.pnlControls.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errprvForm)).BeginInit();
@@ -77,7 +77,7 @@
             // txtID
             // 
             this.txtID.Location = new System.Drawing.Point(629, 11);
-            this.txtID.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtID.Margin = new System.Windows.Forms.Padding(5);
             // 
             // pnlControls
             // 
@@ -86,8 +86,9 @@
             this.pnlControls.Controls.Add(this.pnlItemsInControls);
             this.pnlControls.Controls.Add(this.dgvInvoice);
             this.pnlControls.Controls.Add(this.pnlFooter);
+            this.pnlControls.Location = new System.Drawing.Point(0, 31);
             this.pnlControls.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.pnlControls.Size = new System.Drawing.Size(797, 608);
+            this.pnlControls.Size = new System.Drawing.Size(797, 604);
             this.pnlControls.Controls.SetChildIndex(this.pnlFooter, 0);
             this.pnlControls.Controls.SetChildIndex(this.dgvInvoice, 0);
             this.pnlControls.Controls.SetChildIndex(this.txtID, 0);
@@ -121,11 +122,21 @@
             this.pnlItemsInControls.Controls.Add(this.lblItemCategory);
             this.pnlItemsInControls.Controls.Add(this.lblBarCode);
             this.pnlItemsInControls.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlItemsInControls.Location = new System.Drawing.Point(0, 49);
-            this.pnlItemsInControls.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlItemsInControls.Location = new System.Drawing.Point(0, 45);
+            this.pnlItemsInControls.Margin = new System.Windows.Forms.Padding(4);
             this.pnlItemsInControls.Name = "pnlItemsInControls";
             this.pnlItemsInControls.Size = new System.Drawing.Size(797, 126);
             this.pnlItemsInControls.TabIndex = 4;
+            // 
+            // pnlSearchItems
+            // 
+            this.pnlSearchItems.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlSearchItems.BackgroundImage")));
+            this.pnlSearchItems.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlSearchItems.Location = new System.Drawing.Point(14, 6);
+            this.pnlSearchItems.Name = "pnlSearchItems";
+            this.pnlSearchItems.Size = new System.Drawing.Size(30, 30);
+            this.pnlSearchItems.TabIndex = 40;
+            this.pnlSearchItems.Click += new System.EventHandler(this.pnlSearchItems_Click);
             // 
             // lblPound
             // 
@@ -140,7 +151,7 @@
             // btnClean
             // 
             this.btnClean.Location = new System.Drawing.Point(12, 90);
-            this.btnClean.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClean.Margin = new System.Windows.Forms.Padding(4);
             this.btnClean.Name = "btnClean";
             this.btnClean.Size = new System.Drawing.Size(100, 28);
             this.btnClean.TabIndex = 35;
@@ -151,7 +162,7 @@
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(123, 90);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(100, 28);
             this.btnAdd.TabIndex = 35;
@@ -164,7 +175,7 @@
             this.txtnUnitPrice.BackColor = System.Drawing.Color.White;
             this.txtnUnitPrice.IsInt = false;
             this.txtnUnitPrice.Location = new System.Drawing.Point(67, 44);
-            this.txtnUnitPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtnUnitPrice.Margin = new System.Windows.Forms.Padding(4);
             this.txtnUnitPrice.MaxLength = 7;
             this.txtnUnitPrice.Name = "txtnUnitPrice";
             this.txtnUnitPrice.ReadOnly = true;
@@ -178,7 +189,7 @@
             this.txtnTotalPrice.ForeColor = System.Drawing.Color.Navy;
             this.txtnTotalPrice.IsInt = false;
             this.txtnTotalPrice.Location = new System.Drawing.Point(479, 79);
-            this.txtnTotalPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtnTotalPrice.Margin = new System.Windows.Forms.Padding(4);
             this.txtnTotalPrice.MaxLength = 7;
             this.txtnTotalPrice.Name = "txtnTotalPrice";
             this.txtnTotalPrice.Size = new System.Drawing.Size(168, 30);
@@ -189,7 +200,7 @@
             // 
             this.txtnQuantity.IsInt = false;
             this.txtnQuantity.Location = new System.Drawing.Point(591, 44);
-            this.txtnQuantity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtnQuantity.Margin = new System.Windows.Forms.Padding(4);
             this.txtnQuantity.MaxLength = 7;
             this.txtnQuantity.Name = "txtnQuantity";
             this.txtnQuantity.Size = new System.Drawing.Size(132, 22);
@@ -235,7 +246,7 @@
             // 
             this.cmbUnitID.FormattingEnabled = true;
             this.cmbUnitID.Location = new System.Drawing.Point(293, 44);
-            this.cmbUnitID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbUnitID.Margin = new System.Windows.Forms.Padding(4);
             this.cmbUnitID.Name = "cmbUnitID";
             this.cmbUnitID.Size = new System.Drawing.Size(209, 24);
             this.cmbUnitID.TabIndex = 32;
@@ -256,7 +267,7 @@
             // 
             this.cmbItemID.FormattingEnabled = true;
             this.cmbItemID.Location = new System.Drawing.Point(51, 9);
-            this.cmbItemID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbItemID.Margin = new System.Windows.Forms.Padding(4);
             this.cmbItemID.Name = "cmbItemID";
             this.cmbItemID.Size = new System.Drawing.Size(172, 24);
             this.cmbItemID.TabIndex = 30;
@@ -276,7 +287,7 @@
             // txtBarCode
             // 
             this.txtBarCode.Location = new System.Drawing.Point(591, 11);
-            this.txtBarCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBarCode.Margin = new System.Windows.Forms.Padding(4);
             this.txtBarCode.MaxLength = 50;
             this.txtBarCode.Name = "txtBarCode";
             this.txtBarCode.Size = new System.Drawing.Size(132, 22);
@@ -322,8 +333,8 @@
             this.UnitPrice,
             this.TotalPrice});
             this.dgvInvoice.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvInvoice.Location = new System.Drawing.Point(0, 175);
-            this.dgvInvoice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvInvoice.Location = new System.Drawing.Point(0, 171);
+            this.dgvInvoice.Margin = new System.Windows.Forms.Padding(4);
             this.dgvInvoice.MultiSelect = false;
             this.dgvInvoice.Name = "dgvInvoice";
             this.dgvInvoice.RowHeadersWidth = 51;
@@ -366,9 +377,9 @@
             // 
             this.Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Quantity.DataPropertyName = "Quantity";
-            dataGridViewCellStyle1.Format = "N2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.Quantity.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Format = "N2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.Quantity.DefaultCellStyle = dataGridViewCellStyle4;
             this.Quantity.HeaderText = "الكمية";
             this.Quantity.MaxInputLength = 5;
             this.Quantity.MinimumWidth = 6;
@@ -398,9 +409,9 @@
             // 
             this.UnitPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.UnitPrice.DataPropertyName = "UnitPrice";
-            dataGridViewCellStyle2.Format = "N2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.UnitPrice.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Format = "N2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.UnitPrice.DefaultCellStyle = dataGridViewCellStyle5;
             this.UnitPrice.HeaderText = "سعر الوحدة";
             this.UnitPrice.MinimumWidth = 6;
             this.UnitPrice.Name = "UnitPrice";
@@ -411,11 +422,11 @@
             // 
             this.TotalPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.TotalPrice.DataPropertyName = "TotalPrice";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle3.Format = "N2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.TotalPrice.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle6.Format = "N2";
+            dataGridViewCellStyle6.NullValue = null;
+            this.TotalPrice.DefaultCellStyle = dataGridViewCellStyle6;
             this.TotalPrice.HeaderText = "إجمالي الصنف";
             this.TotalPrice.MinimumWidth = 6;
             this.TotalPrice.Name = "TotalPrice";
@@ -426,7 +437,7 @@
             // 
             this.tvcmbCategory.Direction = CustomControls.ucTreeViewComboBox.Directions.rtl;
             this.tvcmbCategory.Location = new System.Drawing.Point(292, 86);
-            this.tvcmbCategory.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tvcmbCategory.Margin = new System.Windows.Forms.Padding(5);
             this.tvcmbCategory.Name = "tvcmbCategory";
             this.tvcmbCategory.RecursiveTable = true;
             this.tvcmbCategory.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -443,8 +454,8 @@
             this.pnlFooter.Controls.Add(this.txtTotalCash);
             this.pnlFooter.Controls.Add(this.lblTotalValue);
             this.pnlFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlFooter.Location = new System.Drawing.Point(0, 559);
-            this.pnlFooter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlFooter.Location = new System.Drawing.Point(0, 555);
+            this.pnlFooter.Margin = new System.Windows.Forms.Padding(4);
             this.pnlFooter.Name = "pnlFooter";
             this.pnlFooter.Size = new System.Drawing.Size(797, 49);
             this.pnlFooter.TabIndex = 29;
@@ -466,7 +477,7 @@
             this.txtTotalCash.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotalCash.ForeColor = System.Drawing.Color.Navy;
             this.txtTotalCash.Location = new System.Drawing.Point(348, 9);
-            this.txtTotalCash.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTotalCash.Margin = new System.Windows.Forms.Padding(4);
             this.txtTotalCash.MaxLength = 50;
             this.txtTotalCash.Name = "txtTotalCash";
             this.txtTotalCash.Size = new System.Drawing.Size(224, 30);
@@ -498,21 +509,11 @@
             // 
             this.cbxCustomer.FormattingEnabled = true;
             this.cbxCustomer.Location = new System.Drawing.Point(335, 7);
-            this.cbxCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxCustomer.Margin = new System.Windows.Forms.Padding(4);
             this.cbxCustomer.Name = "cbxCustomer";
             this.cbxCustomer.Size = new System.Drawing.Size(199, 24);
             this.cbxCustomer.TabIndex = 32;
             this.cbxCustomer.Tag = "1";
-            // 
-            // pnlSearchItems
-            // 
-            this.pnlSearchItems.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlSearchItems.BackgroundImage")));
-            this.pnlSearchItems.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlSearchItems.Location = new System.Drawing.Point(14, 6);
-            this.pnlSearchItems.Name = "pnlSearchItems";
-            this.pnlSearchItems.Size = new System.Drawing.Size(30, 30);
-            this.pnlSearchItems.TabIndex = 40;
-            this.pnlSearchItems.Click += new System.EventHandler(this.pnlSearchItems_Click);
             // 
             // frmInvoices
             // 

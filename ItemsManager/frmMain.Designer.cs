@@ -75,11 +75,11 @@
             // 
             this.pnlControls.BackColor = System.Drawing.Color.Transparent;
             this.pnlControls.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlControls.BackgroundImage")));
-            this.pnlControls.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pnlControls.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pnlControls.Controls.Add(this.msMain);
             this.pnlControls.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlControls.Location = new System.Drawing.Point(0, 0);
-            this.pnlControls.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlControls.Margin = new System.Windows.Forms.Padding(4);
             this.pnlControls.Name = "pnlControls";
             this.pnlControls.Size = new System.Drawing.Size(989, 635);
             this.pnlControls.TabIndex = 0;
@@ -349,28 +349,28 @@
             // tsmiExchanges
             // 
             this.tsmiExchanges.Name = "tsmiExchanges";
-            this.tsmiExchanges.Size = new System.Drawing.Size(224, 26);
+            this.tsmiExchanges.Size = new System.Drawing.Size(221, 26);
             this.tsmiExchanges.Text = "المصروفات";
             this.tsmiExchanges.Click += new System.EventHandler(this.tsmiExchanges_Click);
             // 
             // tsmiBills
             // 
             this.tsmiBills.Name = "tsmiBills";
-            this.tsmiBills.Size = new System.Drawing.Size(224, 26);
+            this.tsmiBills.Size = new System.Drawing.Size(221, 26);
             this.tsmiBills.Text = "الفواتير";
             this.tsmiBills.Click += new System.EventHandler(this.tsmiBills_Click);
             // 
             // tsmiItemsInReport
             // 
             this.tsmiItemsInReport.Name = "tsmiItemsInReport";
-            this.tsmiItemsInReport.Size = new System.Drawing.Size(224, 26);
+            this.tsmiItemsInReport.Size = new System.Drawing.Size(221, 26);
             this.tsmiItemsInReport.Text = "فواتير الشراء";
             this.tsmiItemsInReport.Click += new System.EventHandler(this.tsmiItemsInReport_Click);
             // 
             // tsmiDesignNewReport
             // 
             this.tsmiDesignNewReport.Name = "tsmiDesignNewReport";
-            this.tsmiDesignNewReport.Size = new System.Drawing.Size(224, 26);
+            this.tsmiDesignNewReport.Size = new System.Drawing.Size(221, 26);
             this.tsmiDesignNewReport.Text = "Design New Report";
             this.tsmiDesignNewReport.Click += new System.EventHandler(this.tsmiDesignNewReport_Click);
             // 
@@ -382,7 +382,7 @@
             this.ClientSize = new System.Drawing.Size(989, 635);
             this.Controls.Add(this.pnlControls);
             this.MainMenuStrip = this.msMain;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.Text = "برنامج مدير الأصناف - الشاشة الرئيسية";
