@@ -24,7 +24,28 @@ namespace ItemsManager.Report
         private void chkbxFilterByExpenseType_CheckedChanged(object sender, EventArgs e)
         {
             pnlExpenseTypeFilterControls.Visible = chkbxFilterByExpenseType.Checked;
-            if (!chkbxFilterByExpenseType.Checked)
+            if (chkbxFilterByExpenseType.Checked)
+            {
+                try
+                {
+                    Cursor.Current = Cursors.WaitCursor;
+                    if(cbxExpenseType.DataSource == null || !(cbxExpenseType.DataSource is DataTable))
+                    {
+                        cbxExpenseType.DataSource = mngrExpensesTypes.GetExpensesTypes();
+                        cbxExpenseType.DisplayMember = "Name";
+                        cbxExpenseType.ValueMember = "ID";
+                    }
+                }
+                catch (Exception ex)
+                {
+                    ErrorHandler.LogError(ex);
+                }
+                finally
+                {
+                    Cursor.Current = Cursors.Default;
+                }
+            }
+            else
                 cbxExpenseType.SelectedIndex = -1;
         }
         private void chkbxFilterByStatement_CheckedChanged(object sender, EventArgs e)

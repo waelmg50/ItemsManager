@@ -26,10 +26,10 @@
                     <Item1 Ref="13" ControlType="XRTableCell" Name="tableCell3" Weight="0.12079663463123048" Text="مسلسل المصروف" TextAlignment="MiddleCenter" Dpi="254" StyleName="DetailCaption1" Borders="None">
                       <StylePriority Ref="14" UseBorders="false" UseTextAlignment="false" />
                     </Item1>
-                    <Item2 Ref="15" ControlType="XRTableCell" Name="tableCell4" Weight="0.16641950893998336" Text="التاريخ" TextAlignment="MiddleCenter" Dpi="254" StyleName="DetailCaption1">
+                    <Item2 Ref="15" ControlType="XRTableCell" Name="tableCell4" Weight="0.17964863572398762" Text="التاريخ" TextAlignment="MiddleCenter" Dpi="254" StyleName="DetailCaption1">
                       <StylePriority Ref="16" UseTextAlignment="false" />
                     </Item2>
-                    <Item3 Ref="17" ControlType="XRTableCell" Name="tableCell5" Weight="0.22018351103782888" Text="البيان" TextAlignment="MiddleCenter" Dpi="254" StyleName="DetailCaption1">
+                    <Item3 Ref="17" ControlType="XRTableCell" Name="tableCell5" Weight="0.20695438425382462" Text="البيان" TextAlignment="MiddleCenter" Dpi="254" StyleName="DetailCaption1">
                       <StylePriority Ref="18" UseTextAlignment="false" />
                     </Item3>
                     <Item4 Ref="19" ControlType="XRTableCell" Name="tableCell6" Weight="0.10847913238009298" Text="القيمة" TextAlignment="MiddleCenter" Dpi="254" StyleName="DetailCaption1">
@@ -79,12 +79,12 @@
                   </ExpressionBindings>
                   <StylePriority Ref="36" UseBorders="false" UseTextAlignment="false" />
                 </Item1>
-                <Item2 Ref="37" ControlType="XRTableCell" Name="tableCell9" Weight="0.16641944837868169" Dpi="254" StyleName="DetailData1">
+                <Item2 Ref="37" ControlType="XRTableCell" Name="tableCell9" Weight="0.17964862053533368" Dpi="254" StyleName="DetailData1">
                   <ExpressionBindings>
                     <Item1 Ref="38" EventName="BeforePrint" PropertyName="Text" Expression="[ExpDate]" />
                   </ExpressionBindings>
                 </Item2>
-                <Item3 Ref="39" ControlType="XRTableCell" Name="tableCell10" Weight="0.22018358672619265" Dpi="254" StyleName="DetailData1">
+                <Item3 Ref="39" ControlType="XRTableCell" Name="tableCell10" Weight="0.20695441456954067" Dpi="254" StyleName="DetailData1">
                   <ExpressionBindings>
                     <Item1 Ref="40" EventName="BeforePrint" PropertyName="Text" Expression="[Statement]" />
                   </ExpressionBindings>
